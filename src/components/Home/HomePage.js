@@ -5,7 +5,7 @@ import GroceryList from "./GroceryList";
 
 const HomePage = () => {
   return (
-    <div>
+    <div >
       <div className=" container mx-auto ">
         <div>
           <Banner />
@@ -14,7 +14,7 @@ const HomePage = () => {
           <CardCorousel />
         </div>
         <div>
-            <GroceryList/>
+          <GroceryList />
         </div>
       </div>
     </div>

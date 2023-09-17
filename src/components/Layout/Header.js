@@ -3,13 +3,14 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import { FaRegUser } from "react-icons/fa";
 import CartButton from "../Cart/CartButton";
+import LocationDetector from "./LocationPicker";
 
 const Header = () => {
  
 
   return (
-    <header className="_nav px-2 sm:px-0">
-      <div className="_header sm:flex h-full">
+    <header className="sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
+      <div className="_header sm:flex ">
         <div className="hidden sm:flex max-w-[150px] md:max-w-[178px] w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light">
           <span className="font-black text-[32px] md:text-[38px] text-yellow-400 tracking-tight">
             blink
@@ -20,7 +21,7 @@ const Header = () => {
         </div>
 
         <div className="w-full sm:w-[240px] xl:w-[320px] py-4 px-1 sm:p-0 _header_loc flex items-center sm:justify-center cursor-pointer sm:hover:bg-gray-50">
-          LocationPicker
+          <LocationDetector/>
         </div>
 
         <div className="flex-1 relative _header_search">

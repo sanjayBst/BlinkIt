@@ -12,10 +12,13 @@ module.exports = {
       },
       width: {
         "w-28": ["width: 7rem"],
+        "w-32": ["width: 8rem"],
         
       },
       height: {
         "h-44": ["height: 11rem"],
+        "h-48": ["height: 12rem"],
+        "h-3/4": ["height: 75%"],
         
       },
     },
