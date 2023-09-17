@@ -1,8 +1,12 @@
 import React from "react";
+
 import SearchBar from "./SearchBar";
 import { FaRegUser } from "react-icons/fa";
+import CartButton from "../Cart/CartButton";
 
 const Header = () => {
+ 
+
   return (
     <header className="_nav px-2 sm:px-0">
       <div className="_header sm:flex h-full">
@@ -16,7 +20,7 @@ const Header = () => {
         </div>
 
         <div className="w-full sm:w-[240px] xl:w-[320px] py-4 px-1 sm:p-0 _header_loc flex items-center sm:justify-center cursor-pointer sm:hover:bg-gray-50">
-          LocationPicker 
+          LocationPicker
         </div>
 
         <div className="flex-1 relative _header_search">
@@ -30,9 +34,8 @@ const Header = () => {
           <span className="sm:hidden _text-default">
             <FaRegUser size={20} />
           </span>
-          <div className="py-2 hidden md:flex h-full items-center mr-8 ml-3">
-            {/* <CartButton /> */}
-            CartButton
+          <div className="container mx-auto p-4">
+            <CartButton  />
           </div>
         </div>
       </div>
