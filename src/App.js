@@ -1,14 +1,32 @@
-import React from 'react'
-import Header from './components/Layout/Header'
-import HomePage from './components/Home/HomePage'
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Header from "./components/Layout/Header";
+import HomePage from "./components/Home/HomePage";
+import PaanCorner from "./components/Pages/PaanCorner";
+import RootLayout from "./components/Pages/Root";
+import ErrorPage from "./components/Pages/Error";
+import GroceryAPI from "./components/Home/GroceryItems";
 
+const routers = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/paan", element: <PaanCorner /> },
+      { path: "/grocery/:category", element: <GroceryAPI /> },
+    ],
+  },
+]);
 const App = () => {
   return (
-    <div>
-      <Header/>
-      <HomePage/>
-    </div>
-  )
-}
+    <>
+      <div>
+        <RouterProvider router={routers} />
+      </div>
+    </>
+  );
+};
 
-export default App
+export default App;

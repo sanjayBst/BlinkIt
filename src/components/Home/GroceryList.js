@@ -1,6 +1,5 @@
 import React from "react";
-import card2 from "../../assets/card2.avif";
-import GroceryAPI from "./GroceryAPI";
+import GroceryAPI from "./GroceryItems";
 import item1 from "../../assets/item1.avif";
 import item2 from "../../assets/item2.avif";
 import item3 from "../../assets/item3.avif";
@@ -21,8 +20,11 @@ import item17 from "../../assets/item17.avif";
 import item18 from "../../assets/item18.avif";
 import item19 from "../../assets/item19.avif";
 import item20 from "../../assets/item20.avif";
+import { useNavigate } from "react-router-dom";
+
 
 const GroceryList = () => {
+  const navigate = useNavigate();
   const arr = [
     item1,
     item2,
@@ -48,27 +50,40 @@ const GroceryList = () => {
     item19,
     item20,
   ];
+
+  const categoryMap = new Map();
+  categoryMap.set(0,"dairy");
+  categoryMap.set(1,"fruits");
+
+  const onClickHandler =(event)=>{
+
+    event.preventDefault();
+    console.log(event.target.value);
+    navigate(`/grocery/dairy`);
+  }
+
+
   return (
     <>
       <div className="flex items-center justify-center ">
-        {arr.map((item) => {
+        {arr.map((item,index) => {
           return (
-            <div className="flex-auto flex-shrink-0  w-10 sm:w-auto">
+            <div key={index} onClick={onClickHandler} value={index} className="flex-auto flex-shrink-0  w-10 sm:w-auto">
               <img src={item} alt="Category images" />
             </div>
           );
         })}
       </div>
       <div className="flex items-center justify-center ">
-        {arr1.map((items) => {
+        {arr1.map((items,index) => {
           return (
-            <div className="flex-auto flex-shrink-0  w-10 sm:w-auto">
+            <div key={index} className="flex-auto flex-shrink-0  w-10 sm:w-auto">
               <img src={items} alt="Category images" />
             </div>
           );
         })}
       </div>
-      <div>{/* <GroceryAPI/> */}</div>
+      {/* <div><GroceryAPI/></div> */}
     </>
   );
 };

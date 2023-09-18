@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   CarouselProvider,
   Slider,
@@ -5,7 +6,7 @@ import {
   ButtonBack,
   ButtonNext,
 } from "pure-react-carousel";
-import card1 from "../../assets/card1.avif";
+import card1 from "../../assets/card1.webp";
 import card2 from "../../assets/card2.avif";
 import card3 from "../../assets/card3.avif";
 import card4 from "../../assets/card4.avif";
@@ -14,9 +15,17 @@ import card6 from "../../assets/card6.avif";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 const CardCorousel = () => {
+  const navigate = useNavigate();
+
+  const groceryPageHandler = (event) => {
+    event.preventDefault();
+    console.log(event.target.value);
+    navigate(`/grocery/Bakery`);
+  };
+
   return (
     <div className="container mx-auto">
-      <div className="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
+      <div className="flex items-center justify-center w-80% h-3/4 sm:py-5 px-1">
         <CarouselProvider
           className="lg:block hidden"
           naturalSlideWidth={100}
@@ -53,24 +62,34 @@ const CardCorousel = () => {
               <Slider>
                 <div
                   id="slider"
-                  className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700"
+                  className="h-full flex lg:gap-5 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700"
                 >
                   <Slide index={0}>
-                    <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                    <div
+                      className="flex flex-shrink-0 relative w-full sm:w-auto"
+                      onClick={groceryPageHandler}
+                      
+                    >
+                      <input value="stationery" type="hidden"/>
                       <img
                         src={card1}
                         alt="black chair and white table"
                         className="object-cover object-center w-full"
+                       
                       />
                     </div>
                   </Slide>
                   <Slide index={1}>
                     <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                      <button  onClick={groceryPageHandler}  value="stationery">
+                        
                       <img
                         src={card2}
                         alt="sitting area"
                         className="object-cover object-center w-full"
                       />
+                      </button>
+                 
                     </div>
                   </Slide>
                   <Slide index={2}>

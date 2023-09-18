@@ -1,20 +1,25 @@
 import React from "react";
 import Banner from "./Banner";
-import CardCorousel from "./CardCorousel";
+import CardCarousel from "./CardCarousel";
 import GroceryList from "./GroceryList";
+import Products from "./Products";
+
 
 const HomePage = () => {
   return (
-    <div >
+    <div>
       <div className=" container mx-auto ">
         <div>
           <Banner />
         </div>
         <div>
-          <CardCorousel />
+          <CardCarousel />
         </div>
         <div>
           <GroceryList />
+        </div>
+        <div>
+          <Products />
         </div>
       </div>
     </div>

@@ -1,18 +1,25 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import bannerImg from "../../assets/banner.webp";
 
 function Banner() {
+  const navigate = useNavigate();
+
+  const coursesPage = () => {
+    navigate("/paan");
+  };
+
   return (
-    <div className="container mx-auto p-4 w-80%">
-
-
+    <div className="container mx-auto px-auto">
       <div className="flex justify-center">
-        <img
-          src={bannerImg} // Replace with your image URL
-          alt="Your Image Alt Text"
-          className="w-100% h-100%" 
-        />
+        <button onClick={coursesPage}>
+          <img
+            src={bannerImg}
+            alt="Paan Corner"
+            className="w-100% h-100%"
+          />
+        </button>
       </div>
     </div>
   );

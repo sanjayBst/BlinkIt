@@ -17,8 +17,11 @@ module.exports = {
       },
       height: {
         "h-44": ["height: 11rem"],
+        "h-72": ["height: 18rem"],
+        "h-32": ["height: 8rem"],
         "h-48": ["height: 12rem"],
         "h-3/4": ["height: 75%"],
+        "h-1/4": ["height: 25%"],
         
       },
     },
