@@ -71,7 +71,7 @@ const GroceryList = () => {
 
   return (
     <>
-      <div className="flex flex-wrap items-center justify-center ">
+      <div className="flex flex-wrap items-center justify-center mx-3">
         {arr.map((item, index) => {
           return (
             <div

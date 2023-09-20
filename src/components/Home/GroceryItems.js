@@ -1,8 +1,21 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 
-const GroceryAPI = () => {
+const GroceryAPI = (props) => {
+  const quantityInputRef = useRef();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    // console.log(quantityInputRef)
+    const enteredQuantity = quantityInputRef.current.value;
+    const enteredQuantityNumber = +enteredQuantity;
+    // console.log(enteredQuantityNumber);
+
+    props.onAddToCart(enteredQuantityNumber);
+  };
+
   const params = useParams();
   // console.log(params.category)
 
@@ -41,12 +54,12 @@ const GroceryAPI = () => {
   }
 
   return (
-    <div className="flex flex-wrap items-center justify-center">
+    <div className="flex flex-wrap items-center justify-center  ">
       {grocery.map((item) => {
         if (item.images) {
           return (
             <div key={item.code}>
-              <div className=" rounded-lg h-72 w-44 border border-gray-200">
+              <div className=" rounded-lg h-72 w-44 border border-gray-200 mx-5 my-4">
                 <div>
                   <img
                     className="rounded-t-lg h-32 "
@@ -56,9 +69,51 @@ const GroceryAPI = () => {
                 </div>
                 <div className="p-5">
                   <div>
-                    <h5 className="mb-2 text-sm font-bold  tracking-tight text-gray-900 dark:text-black">
+                    <h5 className="truncate mb-2 text-sm font-bold  tracking-tight text-gray-900 dark:text-black">
                       {item.name}
                     </h5>
+                  </div>
+
+                  {/* <div className="grid grid-cols-2 divide-x-1  relative h-32 w-32">
+                    <span className="absolute h-14 w-14 bottom-0 start-0">float-left
+                      ₹{" "}
+                      {item.price == undefined || item.price.value == undefined
+                        ? 30
+                        : item.price.value}
+                    </span>
+                    <button>Add</button>borderborder border-gray-400
+                  </div> */}
+                  <div className=" my-14 h-9 w-36 p-2">
+                    <div
+                      className="grid grid-cols-2          
+  
+                    divide-green-500"
+                    >
+                      <div className="mr-1 text-left">
+                        ₹
+                        {item.price == undefined ||
+                        item.price.value == undefined
+                          ? 30
+                          : item.price.value}
+                      </div>
+                      <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
+                        <button
+                          ref={quantityInputRef}
+                          label="Quantity"
+                          input={{
+                            id: "quantity_" + props.id,
+                            type: "number",
+                            min: "1",
+                            max: "5",
+                            step: "1",
+                            defaultValue: "1",
+                          }}
+                          onClick={submitHandler}
+                        >
+                          Add
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

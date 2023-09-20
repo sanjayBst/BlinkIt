@@ -13,6 +13,7 @@ module.exports = {
       width: {
         "w-28": ["width: 7rem"],
         "w-32": ["width: 8rem"],
+        "w-4/5": ["width: 80%"],
         
       },
       height: {
