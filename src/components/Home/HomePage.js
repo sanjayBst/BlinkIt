@@ -2,7 +2,6 @@ import React from "react";
 import Banner from "./Banner";
 import CardCarousel from "./CardCarousel";
 import GroceryList from "./GroceryList";
-import Products from "./Products";
 
 
 const HomePage = () => {
@@ -18,9 +17,7 @@ const HomePage = () => {
         <div>
           <GroceryList />
         </div>
-        <div>
-          <Products />
-        </div>
+        
       </div>
     </div>
   );

@@ -1,4 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useRef } from "react";
+
 import {
   CarouselProvider,
   Slider,
@@ -15,13 +18,15 @@ import card6 from "../../assets/card6.avif";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 const CardCorousel = () => {
+  const exampleRef = useRef();
+
   const navigate = useNavigate();
 
-  const groceryPageHandler = (event) => {
-    event.preventDefault();
-    console.log(event.target.value);
-    navigate(`/grocery/Bakery`);
+  const groceryPageHandler = (value) => {
+    console.log(value);
+    navigate(`/grocery/${value}`);
   };
+ 
 
   return (
     <div className="container mx-auto">
@@ -65,67 +70,102 @@ const CardCorousel = () => {
                   className="h-full flex lg:gap-5 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700"
                 >
                   <Slide index={0}>
-                    <div
-                      className="flex flex-shrink-0 relative w-full sm:w-auto"
-                      onClick={groceryPageHandler}
-                      
-                    >
-                      <input value="stationery" type="hidden"/>
-                      <img
-                        src={card1}
-                        alt="black chair and white table"
-                        className="object-cover object-center w-full"
-                       
-                      />
+                    <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                      <button
+                        value={"stationery"}
+                        onClick={(e) =>
+                          groceryPageHandler(e.currentTarget.value)
+                        }
+                      >
+                        <img
+                          src={card1}
+                          alt="black chair and white table"
+                          className="object-cover object-center w-full"
+                        />
+                      </button>
                     </div>
                   </Slide>
                   <Slide index={1}>
                     <div className="flex flex-shrink-0 relative w-full sm:w-auto">
-                      <button  onClick={groceryPageHandler}  value="stationery">
-                        
-                      <img
-                        src={card2}
-                        alt="sitting area"
-                        className="object-cover object-center w-full"
-                      />
+                      <button
+                        value={"beauty"}
+                        onClick={(e) =>
+                          groceryPageHandler(e.currentTarget.value)
+                        }
+                      >
+                        <img
+                          src={card2}
+                          alt="sitting area"
+                          className="object-cover object-center w-full"
+                        />
                       </button>
-                 
                     </div>
                   </Slide>
                   <Slide index={2}>
                     <div className="flex flex-shrink-0 relative w-full sm:w-auto">
-                      <img
-                        src={card3}
-                        alt="sitting area"
-                        className="object-cover object-center w-full"
-                      />
+                      <button
+                        value={"electronics"}
+                        onClick={(e) =>
+                          groceryPageHandler(e.currentTarget.value)
+                        }
+                      >
+                        <img
+                          src={card3}
+                          alt="sitting area"
+                          className="object-cover object-center w-full"
+                          value={(exampleRef.current = "electronics")}
+                        />
+                      </button>
                     </div>
                   </Slide>
                   <Slide index={3}>
                     <div className="flex flex-shrink-0 relative w-full sm:w-auto">
-                      <img
-                        src={card4}
-                        alt="sitting area"
-                        className="object-cover object-center w-full"
-                      />
+                      <button
+                        value={"medicines"}
+                        onClick={(e) =>
+                          groceryPageHandler(e.currentTarget.value)
+                        }
+                      >
+                        <img
+                          src={card4}
+                          alt="sitting area"
+                          className="object-cover object-center w-full"
+                        />
+                      </button>
                     </div>
                   </Slide>
                   <Slide index={4}>
-                    <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                    <div
+                      className="flex flex-shrink-0 relative w-full sm:w-auto"
+                      
+                    >
+
+                      <button value={"baby-care"}
+                      onClick={(e) => groceryPageHandler(e.currentTarget.value)}>
+
                       <img
                         src={card5}
                         alt="black chair and white table"
                         className="object-cover object-center w-full"
                       />
+                      </button>
                     </div>
                   </Slide>
                   <Slide index={5}>
-                    <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                    <div
+                      className="flex flex-shrink-0 relative w-full sm:w-auto"
+                      
+                    >
+
+                      <button value={"pet-care"}
+                      onClick={(e) => groceryPageHandler(e.currentTarget.value)} >
+
                       <img
                         src={card6}
                         alt="sitting area"
                         className="object-cover object-center w-full"
                       />
+                      </button>
                     </div>
                   </Slide>
                 </div>

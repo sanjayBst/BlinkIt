@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import { FaRegUser } from "react-icons/fa";
 import CartButton from "../Cart/CartButton";
@@ -7,11 +7,17 @@ import LocationDetector from "./LocationPicker";
 
 const Header = () => {
  
+  const navigate = useNavigate();
+
+  const homeHandler = () => {
+    navigate('/');
+  };
+ 
 
   return (
     <header className="sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
       <div className="_header sm:flex ">
-        <div className="hidden sm:flex max-w-[150px] md:max-w-[178px] w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light">
+        <div className="hidden sm:flex max-w-[150px] md:max-w-[178px] w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light" onClick={homeHandler}>
           <span className="font-black text-[32px] md:text-[38px] text-yellow-400 tracking-tight">
             blink
           </span>
