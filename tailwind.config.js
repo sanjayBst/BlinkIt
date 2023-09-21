@@ -14,6 +14,7 @@ module.exports = {
         "w-28": ["width: 7rem"],
         "w-32": ["width: 8rem"],
         "w-4/5": ["width: 80%"],
+        "w-3/6": ["width: 50%"],
         
       },
       height: {

@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useParams , useNavigate} from "react-router-dom";
 
 const GroceryAPI = (props) => {
   const quantityInputRef = useRef();
@@ -15,9 +15,13 @@ const GroceryAPI = (props) => {
 
     props.onAddToCart(enteredQuantityNumber);
   };
+  
+  const navigate = useNavigate();
 
   const params = useParams();
   // console.log(params.category)
+
+
 
   const [grocery, setGrocery] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -53,14 +57,20 @@ const GroceryAPI = (props) => {
     );
   }
 
+  const groceryDetailHandler = (item) => {
+   
+    navigate('/grocery/products/details',{state:item});
+
+  }
+
   return (
-    <div className="flex flex-wrap items-center justify-center  ">
+    <div className="flex flex-wrap items-center justify-center  "  >
       {grocery.map((item) => {
         if (item.images) {
           return (
-            <div key={item.code}>
+            <div key={item.code} >
               <div className=" rounded-lg h-72 w-44 border border-gray-200 mx-5 my-4">
-                <div>
+                <div  onClick={() => groceryDetailHandler(item)} >
                   <img
                     className="rounded-t-lg h-32 "
                     src={item.images[0].url}
@@ -74,15 +84,7 @@ const GroceryAPI = (props) => {
                     </h5>
                   </div>
 
-                  {/* <div className="grid grid-cols-2 divide-x-1  relative h-32 w-32">
-                    <span className="absolute h-14 w-14 bottom-0 start-0">float-left
-                      ₹{" "}
-                      {item.price == undefined || item.price.value == undefined
-                        ? 30
-                        : item.price.value}
-                    </span>
-                    <button>Add</button>borderborder border-gray-400
-                  </div> */}
+                 
                   <div className=" my-14 h-9 w-36 p-2">
                     <div
                       className="grid grid-cols-2          
@@ -91,10 +93,10 @@ const GroceryAPI = (props) => {
                     >
                       <div className="mr-1 text-left">
                         ₹
-                        {item.price == undefined ||
-                        item.price.value == undefined
+                        {item.price === undefined ||
+                        item.price.value === undefined
                           ? 30
-                          : item.price.value}
+                          : Math.round(item.price.value * 10)}
                       </div>
                       <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
                         <button
