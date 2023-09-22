@@ -2,11 +2,12 @@ import React from "react";
 import Banner from "./Banner";
 import CardCarousel from "./CardCarousel";
 import GroceryList from "./GroceryList";
+import Footer from "../Layout/Footer";
 
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <div className=" container mx-auto ">
         <div>
           <Banner />
@@ -19,7 +20,7 @@ const HomePage = () => {
         </div>
         
       </div>
-    </div>
+    </>
   );
 };
 
