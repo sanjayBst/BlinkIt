@@ -44,6 +44,8 @@ const Header = () => {
           <div className="container mx-auto p-4">
             <CartButton  />
           </div>
+          <>
+          </>
         </div>
       </div>
     </header>

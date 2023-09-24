@@ -72,7 +72,7 @@ const GroceryAPI = (props) => {
                     src={item.images[0].url}
                     alt="img"
                   />
-                    <div class="p-10 h-38 absolute inset-0 bg-gray-800 bg-opacity-75 text-white opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out flex items-center justify-center">
+                    <div className="p-10 h-38 absolute inset-0 bg-gray-800 bg-opacity-75 text-white opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out flex items-center justify-center">
                     {item.name}
                   </div>
                 </div>

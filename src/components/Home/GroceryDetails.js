@@ -47,49 +47,49 @@ const GroceryDetails = () => {
           </div>
           <div className="text-md font-bold ">Why shop from blinkit?</div>
 
-          <div class="flex items-center ">
+          <div className="flex items-center ">
             <img
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=90/assets/web/blinkit-promises/10_minute_delivery.png"
               alt="img - 1 "
               className="h-12 w-12 my-3 float-left"
             />
-            <p className="mx-6">
+            <div className="mx-6">
               <h1 className="font-bold text-sm"> Superfast Delivery</h1>
               <p className="text-xs">
                 Get your order delivered to your doorstep at the earliest from
                 dark stores near you.
               </p>
-            </p>
+            </div>
           </div>
 
-          <div class="flex items-center ">
+          <div className="flex items-center ">
             <img
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=90/assets/web/blinkit-promises/Best_Prices_Offers.png"
               alt="img - 2 "
               className="h-12 w-12 my-3 float-left"
             />
-            <p className="mx-6">
+            <div className="mx-6">
               <h1 className="font-bold text-sm">Best Prices & Offers</h1>
               <p className="text-xs">
                 Best price destination with offers directly from the
                 manufacturers.{" "}
               </p>
-            </p>
+            </div>
           </div>
 
-          <div class="flex items-center ">
+          <div className="flex items-center ">
             <img
               src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=90/assets/web/blinkit-promises/Wide_Assortment.png"
               alt="img - 3 "
               className="h-12 w-12 my-3 float-left"
             />
-            <p className="mx-6">
+            <div className="mx-6">
               <h1 className="font-bold text-sm"> Wide Assortment</h1>
               <p className="text-xs">
                 Choose from 5000+ products across food, personal care, household
                 & other categories.{" "}
               </p>
-            </p>
+            </div>
           </div>
         </div>
       </div>
