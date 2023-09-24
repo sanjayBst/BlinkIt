@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../assets/logo.png'
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
@@ -13,32 +13,32 @@ const Footer = () => {
               </h2>
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="#" className=" hover:underline">
+                  <a href="/" className=" hover:underline">
                     About
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Careers
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Blog
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Press
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Lead
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Value
                   </a>
                 </li>
@@ -47,32 +47,32 @@ const Footer = () => {
             <div className="mt-12  w-28">
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Privacy
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Terms
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     FAQs
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Security
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Mobile
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Contact
                   </a>
                 </li>
@@ -81,33 +81,33 @@ const Footer = () => {
             <div className="mt-12 w-28">
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Partner
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Express
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Seller
                   </a>
                 </li>
 
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Spotlight
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Warehouse
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Deliver
                   </a>
                 </li>
@@ -120,47 +120,47 @@ const Footer = () => {
               </h2>
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="#" className=" hover:underline">
+                  <a href="/" className=" hover:underline">
                     Vegetables & Fruits
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Cold Drinks & Juices
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Bakery & Biscuits
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Dry Fruits, Masala & Oil
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Paan Corner
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Pharma & Wellness
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Personal Care
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Beauty & Cosmetics
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Toys & Games
                   </a>
                 </li>
@@ -170,47 +170,47 @@ const Footer = () => {
             <div className="mt-11">
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="#" className=" hover:underline">
+                  <a href="/" className=" hover:underline">
                     Dairy & Breakfast
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Instant & Frozen Food
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Sweet Tooth
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Sauces & Spreads
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Organic & Premium
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Cleaning Essentials
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Ice Creams & Frozen Desserts
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Magazines
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Print Store
                   </a>
                 </li>
@@ -220,76 +220,78 @@ const Footer = () => {
             <div className="mt-11">
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="#" className=" hover:underline">
+                  <a href="/" className=" hover:underline">
                     Munchies
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Tea, Coffee & Health Drinks
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Atta, Rice & Dal
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Chicken, Meat & Fish
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Baby Care
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Home & Office
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Pet Care
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Books
                   </a>
                 </li>
               </ul>
             </div>
-            
           </div>
 
-          
           <div className="px-4 py-6 bg-white dark:bg-gray-50 md:flex md:items-center md:justify-between">
             <span className="text-xs text-gray-500  xs:text-left">
-            © Blink Commerce Private Limited (formerly known as Grofers India
-            <br/> Private Limited), 2016-2023
+              © Blink Commerce Private Limited (formerly known as Grofers India
+              <br /> Private Limited), 2016-2023
             </span>
 
             <div class="flex justify-center ">
-                <div class="flex items-center border w-auto rounded-lg px-4 py-2  mx-2 bg-gray-900 text-white">
-                    <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt="play-store " className="w-7 md:w-8"/>
-                    <div class="text-left ml-3">
-                        <p class='text-xs text-gray-200'>Download on </p>
-                        <p class="text-sm md:text-base"> Google Play Store </p>
-                    </div>
+              <div class="flex items-center border w-auto rounded-lg px-4 py-2  mx-2 bg-gray-900 text-white">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/888/888857.png"
+                  alt="play-store "
+                  className="w-7 md:w-8"
+                />
+                <div class="text-left ml-3">
+                  <p class="text-xs text-gray-200">Download on </p>
+                  <p class="text-sm md:text-base"> Google Play Store </p>
                 </div>
-                <div class="flex items-center border  rounded-lg px-4 py-2 w-52 mx-2 bg-gray-900 text-white">
-                    <img src={logo} alt="apple-logo" className="w-7 md:w-8"/>
-                    <div class="text-left ml-3">
-                        <p class='text-xs text-gray-200'>Download on </p>
-                        <p class="text-sm md:text-base "> Apple Store</p>
-                    </div>
+              </div>
+              <div class="flex items-center border  rounded-lg px-4 py-2 w-52 mx-2 bg-gray-900 text-white">
+                <img src={logo} alt="apple-logo" className="w-7 md:w-8" />
+                <div class="text-left ml-3">
+                  <p class="text-xs text-gray-200">Download on </p>
+                  <p class="text-sm md:text-base "> Apple Store</p>
                 </div>
+              </div>
             </div>
             <div className="flex mt-4 space-x-5 sm:justify-center md:mt-0">
               <a
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-blue-700"
               >
                 <svg
@@ -308,7 +310,7 @@ const Footer = () => {
                 <span className="sr-only">Facebook page</span>
               </a>
               <a
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-indigo-500"
               >
                 <svg
@@ -323,7 +325,7 @@ const Footer = () => {
                 <span className="sr-only">Discord community</span>
               </a>
               <a
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-blue-400"
               >
                 <svg
@@ -342,7 +344,7 @@ const Footer = () => {
                 <span className="sr-only">Twitter page</span>
               </a>
               <a
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-black"
               >
                 <svg
@@ -361,7 +363,7 @@ const Footer = () => {
                 <span className="sr-only">GitHub account</span>
               </a>
               <a
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-orange-600"
               >
                 <svg
@@ -377,12 +379,15 @@ const Footer = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                
               </a>
             </div>
           </div>
-          <div className="text-sm text-gray-500  sm:text-left mx-5  ">
-          “Blinkit” is owned & managed by "Blink Commerce Private Limited" (formerly known as Grofers India Private Limited) and is not related, linked or interconnected in whatsoever manner or nature, to “GROFFR.COM” which is a real estate services business operated by “Redstone Consultancy Services Private Limited”.
+          <div className="text-sm text-gray-500  sm:text-left mx-5 mb-10  ">
+            “Blinkit” is owned & managed by "Blink Commerce Private Limited"
+            (formerly known as Grofers India Private Limited) and is not
+            related, linked or interconnected in whatsoever manner or nature, to
+            “GROFFR.COM” which is a real estate services business operated by
+            “Redstone Consultancy Services Private Limited”.
           </div>
         </div>
       </footer>
