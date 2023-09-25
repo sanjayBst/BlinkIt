@@ -17,6 +17,7 @@ module.exports = {
       width: {
         "w-28": ["width: 7rem"],
         "w-32": ["width: 8rem"],
+        "w-36": ["width: 9rem"],
         "w-4/5": ["width: 80%"],
         "w-3/6": ["width: 50%"],
         "w-11/12": ["91.666667%"],
@@ -26,6 +27,7 @@ module.exports = {
         "h-44": ["height: 11rem"],
         "h-72": ["height: 18rem"],
         "h-32": ["height: 8rem"],
+        "h-36": ["height: 9rem"],
         "h-48": ["height: 12rem"],
         "h-3/4": ["height: 75%"],
         "h-1/4": ["height: 25%"],
