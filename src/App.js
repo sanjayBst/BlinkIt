@@ -1,6 +1,5 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./components/Layout/Header";
 import HomePage from "./components/Home/HomePage";
 import PaanCorner from "./components/Pages/PaanCorner";
 import RootLayout from "./components/Pages/Root";
