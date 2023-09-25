@@ -2,6 +2,7 @@ import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Fragment } from "react";
 import { initFlowbite } from "flowbite";
+import emptyCart from '../../assets/empty_cart.webp'
 import { Offcanvas, Ripple, initTE } from "tw-elements";
 
 initTE({ Offcanvas, Ripple });
@@ -69,19 +70,23 @@ const CartButton = () => {
         <div className="container  flex justify-center items-center  h-44 w-full ">
           <div className="mb-30 h-36 w-36">
             <img
-              src="https://cdn.grofers.com/assets/ui/empty_states/emp_empty_cart.png"
-              alt="Cart-image"
+              src={emptyCart}
+              alt="Cart"
               className="mx-auto block"
             />
           </div>
         </div>
         <div className="font-bold text-xl px-3  text-center">
-          
           You don't have any items in your cart
         </div>
-        <p className="text-md text-gray-600 text-center m-4" >Your favourite items are just a click away</p>
-        <div className="flex justify-center items-center mt-10" >
-          <button className="bg-green-700  text-white text-xs  py-3 px-5 rounded-lg">
+        <p className="text-md text-gray-600 text-center m-4">
+          Your favourite items are just a click away
+        </p>
+        <div className="flex justify-center items-center mt-10">
+          <button type="button"
+          data-drawer-hide="drawer-right-example"
+          aria-controls="drawer-right-example"
+          className="   bg-green-700  text-white text-xs  py-3 px-5 rounded-lg">
             Start Shopping
           </button>
         </div>
