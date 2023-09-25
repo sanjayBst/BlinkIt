@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}",
+  "./node_modules/flowbite/**/*.js"],
+  plugins: [
+    require('flowbite/plugin')
+],
   theme: {
     extend: {
       fontFamily: {
@@ -15,6 +19,7 @@ module.exports = {
         "w-32": ["width: 8rem"],
         "w-4/5": ["width: 80%"],
         "w-3/6": ["width: 50%"],
+        "w-11/12": ["91.666667%"],
         
       },
       height: {
@@ -24,6 +29,7 @@ module.exports = {
         "h-48": ["height: 12rem"],
         "h-3/4": ["height: 75%"],
         "h-1/4": ["height: 25%"],
+        "h-3/6": ["height: 50%"],
         
       },
     },
