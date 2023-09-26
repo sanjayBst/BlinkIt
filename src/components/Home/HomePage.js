@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "./Banner";
 import CardCarousel from "./CardCarousel";
 import GroceryList from "./GroceryList";
+import ItemCorousel from "./ItemCorousel";
 
 
 const HomePage = () => {
@@ -17,7 +18,17 @@ const HomePage = () => {
         <div>
           <GroceryList />
         </div>
-        
+        <div>
+          dairy
+          <ItemCorousel category="dairy"/>
+        </div>
+        <div>
+          <ItemCorousel category="Bakery"/>
+        </div>
+        <div>
+        fruits
+          <ItemCorousel category="fruits"/>
+        </div>
       </div>
     </>
   );

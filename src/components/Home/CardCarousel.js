@@ -25,7 +25,6 @@ const CardCorousel = () => {
     console.log(value);
     navigate(`/grocery/${value}`);
   };
- 
 
   return (
     <div className="container mx-auto">
@@ -40,22 +39,22 @@ const CardCorousel = () => {
           infinite={true}
         >
           <div className="w-full relative flex items-center justify-center">
-            <ButtonBack
+          <ButtonBack
               role="button"
               aria-label="slide backward"
-              className="absolute z-30 left-0 ml-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
+              className="absolute z-30 left-0 ml-10 bg-gray-200 p-3 rounded-full cursor-pointer"
               id="prev"
             >
               <svg
-                width={8}
-                height={14}
-                viewBox="0 0 8 14"
+                width={18}
+                height={18}
+                viewBox="0 0 6 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M7 1L1 7L7 13"
-                  stroke="white"
+                  d="M7 1L0 7L7 13"
+                  stroke="black"
                   strokeWidth={2}
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -134,36 +133,34 @@ const CardCorousel = () => {
                     </div>
                   </Slide>
                   <Slide index={4}>
-                    <div
-                      className="flex flex-shrink-0 relative w-full sm:w-auto"
-                      
-                    >
-
-                      <button value={"baby-care"}
-                      onClick={(e) => groceryPageHandler(e.currentTarget.value)}>
-
-                      <img
-                        src={card5}
-                        alt="black chair and white table"
-                        className="object-cover object-center w-full"
-                      />
+                    <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                      <button
+                        value={"baby-care"}
+                        onClick={(e) =>
+                          groceryPageHandler(e.currentTarget.value)
+                        }
+                      >
+                        <img
+                          src={card5}
+                          alt="black chair and white table"
+                          className="object-cover object-center w-full"
+                        />
                       </button>
                     </div>
                   </Slide>
                   <Slide index={5}>
-                    <div
-                      className="flex flex-shrink-0 relative w-full sm:w-auto"
-                      
-                    >
-
-                      <button value={"pet-care"}
-                      onClick={(e) => groceryPageHandler(e.currentTarget.value)} >
-
-                      <img
-                        src={card6}
-                        alt="sitting area"
-                        className="object-cover object-center w-full"
-                      />
+                    <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                      <button
+                        value={"pet-care"}
+                        onClick={(e) =>
+                          groceryPageHandler(e.currentTarget.value)
+                        }
+                      >
+                        <img
+                          src={card6}
+                          alt="sitting area"
+                          className="object-cover object-center w-full"
+                        />
                       </button>
                     </div>
                   </Slide>
@@ -173,19 +170,19 @@ const CardCorousel = () => {
             <ButtonNext
               role="button"
               aria-label="slide forward"
-              className="absolute z-30 right-0 mr-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+              className="absolute z-30 right-0 mr-8 bg-gray-200 p-3 rounded-full"
               id="next"
             >
               <svg
-                width={8}
-                height={14}
-                viewBox="0 0 8 14"
+                width={18}
+                height={18}
+                viewBox="0 0 6 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M1 1L7 7L1 13"
-                  stroke="white"
+                  stroke="black"
                   strokeWidth={2}
                   strokeLinecap="round"
                   strokeLinejoin="round"

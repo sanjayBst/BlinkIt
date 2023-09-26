@@ -23,7 +23,7 @@ const GroceryAPI = (props) => {
 
   const [grocery, setGrocery] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [httpError, setHttpError] = useState();
+  const [, setHttpError] = useState();
   useEffect(() => {
     const fetchGrocery = async () => {
       const response = await fetch(
@@ -66,24 +66,25 @@ const GroceryAPI = (props) => {
           return (
             <div key={item.code}>
               <div className=" rounded-lg h-72 w-44 border border-gray-200 mx-5 my-4  cursor-pointer ">
-                <div onClick={() => groceryDetailHandler(item)} className="group relative">
+                <div
+                  onClick={() => groceryDetailHandler(item)}
+                  className="group relative"
+                >
                   <img
                     className="rounded-t-lg h-32 "
                     src={item.images[0].url}
                     alt="img"
                   />
-                    <div className="p-10 h-38 absolute inset-0 bg-gray-800 bg-opacity-75 text-white opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out flex items-center justify-center">
+                  <div className="p-10 h-38 absolute inset-0 bg-gray-800 bg-opacity-75 text-white opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out flex items-center justify-center">
                     {item.name}
                   </div>
                 </div>
                 <div className="p-5 ">
-                  <div >
+                  <div>
                     <h5 className="truncate  mb-2 text-sm font-bold  tracking-tight text-gray-900 dark:text-black">
                       {item.name}
                     </h5>
-                
                   </div>
-
 
                   <div className=" my-14 h-9 w-36 p-2">
                     <div
