@@ -7,7 +7,7 @@ import { Offcanvas, Ripple, initTE } from "tw-elements";
 
 initTE({ Offcanvas, Ripple });
 
-const CartButton = () => {
+const CartModal = () => {
   return (
     <>
       {/* <div className="flex items-center rounded-[6px] min-w-[112px] h-[50px] py-2 px-3 gap-2 font-bold text-sm bg-[#0c831f] cursor-pointer text-white" >
@@ -48,7 +48,7 @@ const CartButton = () => {
           type="button"
           data-drawer-hide="drawer-right-example"
           aria-controls="drawer-right-example"
-          className="text-gray-700 py-10 bg-transparent hover:bg-gray-200  rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-50 dark:hover:text-black"
+          className="text-gray-700 my-6 py-1 bg-transparent hover:bg-gray-200  rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-50 dark:hover:text-black"
         >
           <svg
             className="w-3 h-3"
@@ -95,4 +95,4 @@ const CartButton = () => {
   );
 };
 
-export default CartButton;
+export default CartModal;

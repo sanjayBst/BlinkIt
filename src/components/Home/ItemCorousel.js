@@ -8,9 +8,11 @@ import {
   ButtonNext,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import { useNavigate } from "react-router-dom";
 
 const ItemCorousel = (props) => {
   console.log(props);
+  const navigate = useNavigate();
   const [grocery, setGrocery] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState();
@@ -46,6 +48,10 @@ const ItemCorousel = (props) => {
       </section>
     );
   }
+
+  const groceryDetailHandler = (item) => {
+    navigate("/grocery/products/details", { state: item });
+  };
 
   return (
     <div className="container overflow-hidden mx-auto w-sm">
@@ -120,7 +126,7 @@ const ItemCorousel = (props) => {
                             <button>
                               <div key={item.code}>
                                 <div className="shadow-md rounded-lg h-72 w-44  border border-gray-200 mx-5 my-4  cursor-pointer ">
-                                  <div className="object-cover object-center w-full flex items-center justify-center group relative">
+                                  <div className="object-cover object-center w-full flex items-center justify-center group relative" onClick={() => groceryDetailHandler(item)}>
                                     <img
                                       className=" rounded-t-lg h-36 w-28 "
                                       src={item.images[0].url}
@@ -139,7 +145,7 @@ const ItemCorousel = (props) => {
 
                                     <div className=" my-14 h-9 w-36 p-2">
                                       <div className="grid grid-cols-2 divide-green-500">
-                                        <div className="mr-1 text-left">
+                                        <div className="mr-1  text-left">
                                           ₹
                                           {item.price === undefined ||
                                           item.price.value === undefined

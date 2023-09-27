@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import { FaRegUser } from "react-icons/fa";
-import CartButton from "../Cart/CartButton";
+import CartModal from "../Cart/CartModal";
 import LocationDetector from "./LocationPicker";
 
 const Header = () => {
@@ -42,7 +42,7 @@ const Header = () => {
             <FaRegUser size={20} />
           </span>
           <div className="container mx-auto p-4">
-            <CartButton  />
+            <CartModal  />
           </div>
           <>
           </>

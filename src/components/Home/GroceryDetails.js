@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 const GroceryDetails = () => {
   const groceryItem = useLocation();
 
-  console.log("params====>", groceryItem.state);
+  console.log("params====>", groceryItem.state.description);
 
   return (
     <>
@@ -32,7 +32,7 @@ const GroceryDetails = () => {
             <p className="text-sm my-2 text-left">Blinkit Pvt. Ltd.</p>
             <h4 className="text-md font-bold my-2 "> Description</h4>
             <p className="text-sm my-2 text-left">
-              {groceryItem.state.description}
+              {groceryItem.state.description === undefined ? 'This is Dummy Description' : groceryItem.state.description}
             </p>
           </div>
         </div>
