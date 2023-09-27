@@ -65,7 +65,7 @@ const GroceryAPI = (props) => {
         if (item.images) {
           return (
             <div key={item.code}>
-              <div className=" rounded-lg h-72 w-44 border border-gray-200 mx-5 my-4  cursor-pointer ">
+              <div className="shadow-md rounded-lg h-72 w-44 border border-gray-200 mx-5 my-4  cursor-pointer ">
                 <div
                   onClick={() => groceryDetailHandler(item)}
                   className="group relative"

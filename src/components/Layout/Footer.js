@@ -1,7 +1,10 @@
 import React from "react";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+
+  
   return (
     <div>
       <footer className="bg-white dark:bg-white">
@@ -13,103 +16,103 @@ const Footer = () => {
               </h2>
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="/" className=" hover:underline">
+                  <Link to="/" className=" hover:underline">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Careers
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Press
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Lead
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Value
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="mt-12  w-28">
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Privacy
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Terms
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     FAQs
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Security
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Mobile
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="mt-12 w-28">
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Partner
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Express
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Seller
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Spotlight
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Warehouse
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Deliver
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -120,49 +123,49 @@ const Footer = () => {
               </h2>
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="/" className=" hover:underline">
+                  <Link to="/" className=" hover:underline">
                     Vegetables & Fruits
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Cold Drinks & Juices
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Bakery & Biscuits
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Dry Fruits, Masala & Oil
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Paan Corner
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Pharma & Wellness
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Personal Care
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Beauty & Cosmetics
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Toys & Games
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -170,49 +173,49 @@ const Footer = () => {
             <div className="mt-11">
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="/" className=" hover:underline">
+                  <Link to="/" className=" hover:underline">
                     Dairy & Breakfast
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Instant & Frozen Food
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Sweet Tooth
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Sauces & Spreads
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Organic & Premium
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Cleaning Essentials
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Ice Creams & Frozen Desserts
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Magazines
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Print Store
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -220,44 +223,44 @@ const Footer = () => {
             <div className="mt-11">
               <ul className="text-sm">
                 <li className="mb-1">
-                  <a href="/" className=" hover:underline">
+                  <Link to="/" className=" hover:underline">
                     Munchies
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Tea, Coffee & Health Drinks
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Atta, Rice & Dal
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Chicken, Meat & Fish
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Baby Care
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Home & Office
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Pet Care
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-1">
-                  <a href="/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Books
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -290,8 +293,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex mt-4 space-x-5 sm:justify-center md:mt-0">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-blue-700"
               >
                 <svg
@@ -308,9 +311,9 @@ const Footer = () => {
                   />
                 </svg>
                 <span className="sr-only">Facebook page</span>
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-indigo-500"
               >
                 <svg
@@ -323,9 +326,9 @@ const Footer = () => {
                   <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
                 </svg>
                 <span className="sr-only">Discord community</span>
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-blue-400"
               >
                 <svg
@@ -342,9 +345,9 @@ const Footer = () => {
                   />
                 </svg>
                 <span className="sr-only">Twitter page</span>
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-black"
               >
                 <svg
@@ -361,9 +364,9 @@ const Footer = () => {
                   />
                 </svg>
                 <span className="sr-only">GitHub account</span>
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-orange-600"
               >
                 <svg
@@ -379,14 +382,14 @@ const Footer = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="text-sm text-gray-500  sm:text-left mx-5 mb-10  ">
             “Blinkit” is owned & managed by "Blink Commerce Private Limited"
             (formerly known as Grofers India Private Limited) and is not
             related, linked or interconnected in whatsoever manner or nature, to
-            “GROFFR.COM” which is a real estate services business operated by
+            “GROFFR.COM” which is Link real estate services business operated by
             “Redstone Consultancy Services Private Limited”.
           </div>
         </div>

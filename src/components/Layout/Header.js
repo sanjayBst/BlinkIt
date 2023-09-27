@@ -18,10 +18,10 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
       <div className="_header sm:flex ">
         <div className="hidden sm:flex max-w-[150px] md:max-w-[178px] w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light" onClick={homeHandler}>
-          <span className="font-black text-[32px] md:text-[38px] text-yellow-400 tracking-tight">
+          <span className="font-extrabold  md:text-[38px] text-yellow-300 tracking-tight">
             blink
           </span>
-          <span className="font-black text-[32px] md:text-[38px] text-green-600 tracking-tight">
+          <span className="font-extrabold md:text-[38px] text-green-400 tracking-tight">
             it
           </span>
         </div>
@@ -35,7 +35,7 @@ const Header = () => {
         </div>
 
         <div className="flex items-center _header_login justify-center cursor-pointer sm:hover:bg-gray-50 max-w-[80px] lg:max-w-[160px] w-full ">
-          <span className="font-medium _text-default hidden sm:block">
+          <span className="font-normal text-xl hidden sm:block">
             Login
           </span>
           <span className="sm:hidden _text-default">
