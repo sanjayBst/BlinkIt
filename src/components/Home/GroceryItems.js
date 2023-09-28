@@ -124,7 +124,7 @@ const GroceryAPI = (props) => {
                           }}
                           onClick={()=>{submitHandler(item)}}
                         >
-                          Add m
+                          Add
                         </button>
                       </div>
                     </div>

@@ -19,19 +19,19 @@ const HomePage = () => {
           <GroceryList />
         </div>
         <div>
-          <div className="text-3xl font-medium" >
+          <div className="text-2xl font-medium" >
           Dairy, Bread & Eggs
           </div>
           <ItemCorousel category="dairy"/>
         </div>
         <div>
-        <div className="text-3xl font-medium">
+        <div className="text-2xl font-medium">
         Rolling paper & tobacco
           </div>
           <ItemCorousel category="Bakery"/>
         </div>
         <div>
-        <div className="text-3xl font-medium">
+        <div className="text-2xl font-medium">
         Snacks & Munchies
           </div>
           <ItemCorousel category="fruits"/>

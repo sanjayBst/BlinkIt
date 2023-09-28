@@ -22,9 +22,9 @@ const CartIcon = () => {
           aria-controls="drawer-right-example"
         >
           <FaShoppingCart size={24} className="_wiggle" />
-          <div className="flex flex-col font-bold text-[14px] leading-none">
-            <span>My Cart</span>
-            <span>{numberOfCartItems}</span>
+          <div className="flex flex-col font-bold text-[12px] leading-none">
+            <span>{numberOfCartItems === 0 ? 'My Cart' : numberOfCartItems + " items"}</span>
+            <span>{numberOfCartItems === 0 ? '' : "₹"+ cartCtx.totalAmount}</span>
           </div>
         </button>
       </div>

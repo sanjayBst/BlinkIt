@@ -88,7 +88,7 @@ const CartModal = (props) => {
           </button>
         </div> */}
         <div> 
-        <ModalOverlay>{props.children}</ModalOverlay>,
+        <ModalOverlay>{props.children}</ModalOverlay>
         </div>
       </div>
     </>

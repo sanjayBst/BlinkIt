@@ -41,7 +41,7 @@ const ItemCorousel = (props) => {
       setIsLoading(false);
       setHttpError(error.message);
     });
-  });
+  },[]);
 
   if (isLoading) {
     return (

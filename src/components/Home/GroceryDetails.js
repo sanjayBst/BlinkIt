@@ -1,8 +1,24 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../../store/CartContext";
 
 const GroceryDetails = () => {
   const groceryItem = useLocation();
+  const cartCtx = useContext(CartContext);
+
+  const submitHandler = () => {
+    // const enteredQuantity = quantityInputRef.current.value;
+    // const enteredQuantityNumber = +enteredQuantity;
+
+    console.log("groceryITem,",groceryItem )
+    cartCtx.addItem({
+      id: groceryItem.state.code,
+      name: groceryItem.state.name,
+      amount: 1,
+      price: groceryItem.state.price.value,
+    });
+  };
 
   // console.log("params====>", groceryItem.state.description);
 
@@ -32,7 +48,9 @@ const GroceryDetails = () => {
             <p className="text-sm my-2 text-left">Blinkit Pvt. Ltd.</p>
             <h4 className="text-md font-bold my-2 "> Description</h4>
             <p className="text-sm my-2 text-left">
-              {groceryItem.state.description === undefined ? 'This is Dummy Description' : groceryItem.state.description}
+              {groceryItem.state.description === undefined
+                ? "This is Dummy Description"
+                : groceryItem.state.description}
             </p>
           </div>
         </div>
@@ -42,8 +60,8 @@ const GroceryDetails = () => {
           <div className="font-bold text-sm mt-10">
             ₹ {Math.ceil(groceryItem.state.price.value * 10)}
           </div>
-          <div className= " w-16 mb-10 mt-3 rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
-            <button>Add</button>
+          <div className=" w-16 mb-10 mt-3 rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
+            <button onClick={submitHandler}>Add</button>
           </div>
           <div className="text-md font-bold ">Why shop from blinkit?</div>
 
