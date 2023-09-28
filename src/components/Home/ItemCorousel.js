@@ -1,5 +1,6 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext} from "react";
+import CartContext from "../../store/CartContext";
 import {
   CarouselProvider,
   Slider,
@@ -11,18 +12,19 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import { useNavigate } from "react-router-dom";
 
 const ItemCorousel = (props) => {
-  console.log(props);
+  // console.log(props);
+  const cartCtx = useContext(CartContext);
   const navigate = useNavigate();
   const [grocery, setGrocery] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [httpError, setHttpError] = useState();
+  const [, setHttpError] = useState();
   useEffect(() => {
     const fetchGrocery = async () => {
       const response = await fetch(
         `https://blinkit-clone-36f01-default-rtdb.firebaseio.com/${props.category}.json`
       );
 
-      console.log(response);
+      // console.log(response);
       if (!response.ok) {
         throw new Error("Oops! something went wrong..");
       }
@@ -51,6 +53,26 @@ const ItemCorousel = (props) => {
 
   const groceryDetailHandler = (item) => {
     navigate("/grocery/products/details", { state: item });
+  };
+
+
+
+  const submitHandler = (item) => {
+  
+   
+
+    // console.log(quantityInputRef)
+    // const enteredQuantity = quantityInputRef.current.value;
+    // const enteredQuantityNumber = +enteredQuantity;
+    // console.log(enteredQuantityNumber);
+    cartCtx.addItem({
+      id: item.code,
+      name: item.name,
+      amount: 1,
+      price: item.price.value,
+    });
+
+    
   };
 
   return (
@@ -121,7 +143,7 @@ const ItemCorousel = (props) => {
                   {grocery.map((item, index) => {
                     if (item.images) {
                       return (
-                        <Slide index={index}>
+                        <Slide key={index}  index={index}>
                           <div className=" flex flex-shrink-0 relative w-full sm:w-auto">
                             <button>
                               <div key={item.code}>
@@ -150,10 +172,10 @@ const ItemCorousel = (props) => {
                                           {item.price === undefined ||
                                           item.price.value === undefined
                                             ? 30
-                                            : Math.round(item.price.value * 10)}
+                                            : Math.ceil(item.price.value * 10)}
                                         </div>
                                         <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
-                                          <button>Add</button>
+                                          <button onClick={()=>{submitHandler(item)}} >Add</button>
                                         </div>
                                       </div>
                                     </div>

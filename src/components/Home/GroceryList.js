@@ -63,9 +63,9 @@ const GroceryList = () => {
   categoryMap.set("17", "pet-care");
 
   const onClickHandler = (value) => {
-    console.log(categoryMap);
+    // console.log(categoryMap);
     // console.log(value);
-    console.log(categoryMap.get(value.toString()));
+    // console.log(categoryMap.get(value.toString()));
     navigate(`/grocery/${categoryMap.get(value.toString())}`);
   };
 

@@ -1,19 +1,29 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../../store/CartContext";
 
 const GroceryAPI = (props) => {
   const quantityInputRef = useRef();
+  const cartCtx = useContext(CartContext);
 
-  const submitHandler = (event) => {
-    event.preventDefault();
+  const submitHandler = (item) => {
+  
+   
 
     // console.log(quantityInputRef)
-    const enteredQuantity = quantityInputRef.current.value;
-    const enteredQuantityNumber = +enteredQuantity;
+    // const enteredQuantity = quantityInputRef.current.value;
+    // const enteredQuantityNumber = +enteredQuantity;
     // console.log(enteredQuantityNumber);
+    cartCtx.addItem({
+      id: item.code,
+      name: item.name,
+      amount: 1,
+      price: item.price.value,
+    });
 
-    props.onAddToCart(enteredQuantityNumber);
+    
   };
 
   const navigate = useNavigate();
@@ -25,6 +35,7 @@ const GroceryAPI = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [, setHttpError] = useState();
   useEffect(() => {
+    console.log("I am called again!")
     const fetchGrocery = async () => {
       const response = await fetch(
         `https://blinkit-clone-36f01-default-rtdb.firebaseio.com/${params.category}.json`
@@ -97,7 +108,7 @@ const GroceryAPI = (props) => {
                         {item.price === undefined ||
                         item.price.value === undefined
                           ? 30
-                          : Math.round(item.price.value * 10)}
+                          : Math.ceil(item.price.value * 10)}
                       </div>
                       <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
                         <button
@@ -111,9 +122,9 @@ const GroceryAPI = (props) => {
                             step: "1",
                             defaultValue: "1",
                           }}
-                          onClick={submitHandler}
+                          onClick={()=>{submitHandler(item)}}
                         >
-                          Add
+                          Add m
                         </button>
                       </div>
                     </div>

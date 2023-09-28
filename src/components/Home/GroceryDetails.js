@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 const GroceryDetails = () => {
   const groceryItem = useLocation();
 
-  console.log("params====>", groceryItem.state.description);
+  // console.log("params====>", groceryItem.state.description);
 
   return (
     <>
@@ -40,7 +40,7 @@ const GroceryDetails = () => {
           <div className="font-bold text-3xl"> {groceryItem.state.name}</div>
           <div className="font-bold text-xs"> 14 min</div>
           <div className="font-bold text-sm mt-10">
-            ₹ {Math.round(groceryItem.state.price.value * 10)}
+            ₹ {Math.ceil(groceryItem.state.price.value * 10)}
           </div>
           <div className= " w-16 mb-10 mt-3 rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
             <button>Add</button>

@@ -1,13 +1,23 @@
 import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
-import { Fragment } from "react";
+
+
 import { initFlowbite } from "flowbite";
 import emptyCart from '../../assets/empty_cart.webp'
 import { Offcanvas, Ripple, initTE } from "tw-elements";
+import CartIcon from "./CartIcon";
 
 initTE({ Offcanvas, Ripple });
 
-const CartModal = () => {
+
+const ModalOverlay = (props) => {
+  return (
+    <div>
+      <div>{props.children}</div>
+    </div>
+  );
+};
+
+const CartModal = (props) => {
   return (
     <>
       {/* <div className="flex items-center rounded-[6px] min-w-[112px] h-[50px] py-2 px-3 gap-2 font-bold text-sm bg-[#0c831f] cursor-pointer text-white" >
@@ -17,21 +27,8 @@ const CartModal = () => {
       </div>
      </div> */}
 
-      <div className="text-center">
-        <button
-          className="flex items-center rounded-[6px] min-w-[112px] h-[50px] py-2 px-3 gap-2 font-bold text-sm bg-[#0c831f] cursor-pointer text-white"
-          type="button"
-          data-drawer-target="drawer-right-example"
-          data-drawer-show="drawer-right-example"
-          data-drawer-placement="right"
-          aria-controls="drawer-right-example"
-        >
-          <FaShoppingCart size={24} className="_wiggle" />
-          <div className="flex flex-col font-bold text-[14px] leading-none">
-            <span>My Cart</span>
-          </div>
-        </button>
-      </div>
+<CartIcon/>
+      
 
       <div
         id="drawer-right-example"
@@ -39,7 +36,7 @@ const CartModal = () => {
         tabindex="-1"
         aria-labelledby="drawer-right-label"
       >
-        <div className="container  w-full bg-white mb w-full bg-white py-6">
+        <div className="container w-full bg-white py-6">
           <h5 class="inline-flex items-center  text-base font-bold text-black">
             My Cart
           </h5>
@@ -67,7 +64,7 @@ const CartModal = () => {
           </svg>
           <span className="sr-only">Close menu</span>
         </button>
-        <div className="container  flex justify-center items-center  h-44 w-full ">
+        {/* <div className="container  flex justify-center items-center  h-44 w-full ">
           <div className="mb-30 h-36 w-36">
             <img
               src={emptyCart}
@@ -89,6 +86,9 @@ const CartModal = () => {
           className="   bg-green-700  text-white text-xs  py-3 px-5 rounded-lg">
             Start Shopping
           </button>
+        </div> */}
+        <div> 
+        <ModalOverlay>{props.children}</ModalOverlay>,
         </div>
       </div>
     </>
