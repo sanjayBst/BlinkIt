@@ -1,32 +1,34 @@
 import CartModal from "./CartModal";
 import CartContext from "../../store/CartContext";
-import { useLocation } from "react-router-dom";
 import { useContext } from "react";
+import item9 from '../../assets/item9.avif'
 
 const Cart = () => {
-  const groceryItem = useLocation();
   const cartCtx = useContext(CartContext);
 
   const buttonStyle =
     "text-green-600 border-2 border-green-600 font-inherit cursor-pointer bg-transparent  px-4 py-2 rounded-md ml-4 bg-green-700 hover:bg-green-600  hover:text-white ";
 
-    console.log(groceryItem.state.name)
+  console.log(cartCtx.items);
 
-    //  const cartItems = {
-    //   id: groceryItem.state.code,
-    //   // name: groceryItem.state.name,
-    //   // amount: 1,
-    //   // price: groceryItem.state.price.value,
-    // };
-  
-    const cartItems = (
-      <ul className='m-0 p-0 list-none'>
-        {[{ id: groceryItem.state.code, name: groceryItem.state.name, amount: 2, price: groceryItem.state.price.value }].map((item, index) => (
-          <li key={index}>{item.name},{Math.ceil(item.price)}</li>
-        ))}
-      </ul>
-    );
-
+  const cartItems = (
+    <ul className="m-0 p-0 list-none">
+      {cartCtx.items.map((item, index) => (
+        <div className="flex flex-wrap  container justify-center w-100% h-fill ">
+          <div>
+            <li key={index}>
+              <img src={item9} alt="item" className=" h-20 w-20" />
+            </li>
+          </div>
+          <div>
+            <li key={index}>{item.name}</li>
+            <li key={index}>{Math.ceil(item.price * 10)}</li>
+          </div>
+         
+        </div>
+      ))}
+    </ul>
+  );
 
   return (
     <CartModal>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { FaShoppingCart } from "react-icons/fa";
+import { BsCart3 } from "react-icons/bs";
 import CartContext from "../../store/CartContext";
 
 const CartIcon = () => {
@@ -20,7 +20,9 @@ const CartIcon = () => {
           data-drawer-placement="right"
           aria-controls="drawer-right-example"
         >
-          <FaShoppingCart size={24} className="_wiggle" />
+
+          <BsCart3 size={22} className="_wiggle " style={{strokeWidth:'0.4'}} />
+
           <div className="flex flex-col font-bold text-[12px] leading-none">
             <span>
               {numberOfCartItems === 0
