@@ -32,14 +32,14 @@ const CartModal = (props) => {
 
       <div
         id="drawer-right-example"
-        className=" fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-2/6 dark:bg-white"
+        className=" fixed top-0 right-0 z-40 bg-gray-100 h-screen  overflow-y-auto transition-transform translate-x-full  w-96 dark:bg-white"
         tabindex="-1"
         aria-labelledby="drawer-right-label"
       >
-        <div className="sticky top-0 ">
+        <div className="sticky top-0 w-full bg-white ">
 
-        <div className=" container w-full bg-white py-6">
-          <h5 className=" inline-flex items-center  text-base font-bold text-black">
+        <div className=" container mb-20  py-6">
+          <h5 className=" inline-flex items-center px-7 text-base font-bold text-black ">
             My Cart
           </h5>
         </div>

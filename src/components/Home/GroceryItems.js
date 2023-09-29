@@ -107,7 +107,9 @@ const GroceryAPI = (props) => {
                           ? 30
                           : Math.ceil(item.price.value * 10)}
                       </div>
-                      <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
+                      <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1" onClick={() => {
+                            submitHandler(item);
+                          }}>
                         <button
                           ref={quantityInputRef}
                           label="Quantity"
@@ -119,9 +121,7 @@ const GroceryAPI = (props) => {
                             step: "1",
                             defaultValue: "1",
                           }}
-                          onClick={() => {
-                            submitHandler(item);
-                          }}
+                          
                         >
                           Add
                         </button>

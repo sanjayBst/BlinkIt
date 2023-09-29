@@ -7,32 +7,30 @@ const Cart = () => {
   const cartCtx = useContext(CartContext);
 
   const buttonStyle =
-    "text-green-600 border-2 border-green-600 font-inherit cursor-pointer bg-transparent  px-4 py-2 rounded-md ml-4 bg-green-700 hover:bg-green-600  hover:text-white ";
+    " text-md font-light cursor-pointer px-2 py-4 rounded-md ml-4   text-white ";
+  const buttonContent = "Login to proceed >";
 
   console.log(cartCtx.items);
 
   const cartItems = (
-    <ul className="m-0 p-0 list-none">
+    <ul className="m-0 p-0 bg-white  list-none">
       {cartCtx.items.map((item, index) => (
         <>
-        <div className="flex flex-row container my-4 w-100% h-fill ">
-          <div className="justify-center basis-1/4 mx-3">
-            <li key={index}>
-              <img src={item.image} alt="item" className=" h-16 w-16 m-0" />
-            </li>
-          </div>
-          <div className=" text-xs  basis-1/2 mx-2">
-            <li key={index}>{item.name}</li>
-            <li key={index}>{Math.ceil(item.price * 10)}</li>
-          </div>
-          
-          <div>
-          
+          <div className="flex flex-row container my-4 w-100% h-fill   items-center ">
+            <div className=" basis-1/4 mx-3">
+              <li key={index}>
+                <img src={item.image} alt="item" className=" h-16 w-16 " />
+              </li>
+            </div>
+            <div className=" text-xs  basis-1/2 ">
+              <li key={index}>{item.name}</li>
+              <li key={index}>{Math.ceil(item.price * 10)}</li>
+            </div>
 
-          <CartCounter className=' basis-1/4 ' />
-         </div>
-        </div>
-        
+            <div >
+              <CartCounter className=" basis-1/4  " />
+            </div>
+          </div>
         </>
       ))}
     </ul>
@@ -41,12 +39,16 @@ const Cart = () => {
   return (
     <CartModal>
       {cartItems}
-      <div className="flex justify justify-between items-center font-bold text-lg my-4 mx-0 ">
-        <span>Total Amount</span>
-        <span> {cartCtx.totalAmount}</span>
-      </div>
-      <div className=" text-right">
-        <button className={buttonStyle}>Order</button>
+      <div
+        className="fixed bottom-0 bg-white w-96 px-4 rounded-xl "
+      >
+        <div className="sticky  bottom-0  bg-counter rounded-lg flex  justify-between items-center font-bold text-md my-3 mx-1 mb-6">
+          <div className="text-white mx-3 text-xs">
+            <div> {"₹" + cartCtx.totalAmount}</div>
+            <div className="font-extralight ">TOTAL </div>
+          </div>
+          <button className={buttonStyle}>{buttonContent}</button>
+        </div>
       </div>
     </CartModal>
   );
