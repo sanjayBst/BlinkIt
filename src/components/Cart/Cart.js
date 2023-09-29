@@ -1,7 +1,7 @@
 import CartModal from "./CartModal";
 import CartContext from "../../store/CartContext";
 import { useContext } from "react";
-import item9 from '../../assets/item9.avif'
+import CartCounter from "./CartCounter";
 
 const Cart = () => {
   const cartCtx = useContext(CartContext);
@@ -14,18 +14,26 @@ const Cart = () => {
   const cartItems = (
     <ul className="m-0 p-0 list-none">
       {cartCtx.items.map((item, index) => (
-        <div className="flex flex-wrap  container justify-center w-100% h-fill ">
-          <div>
+        <>
+        <div className="flex flex-row container my-4 w-100% h-fill ">
+          <div className="justify-center basis-1/4 mx-3">
             <li key={index}>
-              <img src={item9} alt="item" className=" h-20 w-20" />
+              <img src={item.image} alt="item" className=" h-16 w-16 m-0" />
             </li>
           </div>
-          <div>
+          <div className=" text-xs  basis-1/2 mx-2">
             <li key={index}>{item.name}</li>
             <li key={index}>{Math.ceil(item.price * 10)}</li>
           </div>
-         
+          
+          <div>
+          
+
+          <CartCounter className=' basis-1/4 ' />
+         </div>
         </div>
+        
+        </>
       ))}
     </ul>
   );

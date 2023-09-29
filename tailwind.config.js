@@ -35,6 +35,9 @@ module.exports = {
         
       },
     },
+    colors:{
+      'counter':'#318616',
+    }
   },
   // plugins: [],
 };

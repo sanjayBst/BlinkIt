@@ -32,20 +32,22 @@ const CartModal = (props) => {
 
       <div
         id="drawer-right-example"
-        className="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-1/4 dark:bg-white"
+        className=" fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-2/6 dark:bg-white"
         tabindex="-1"
         aria-labelledby="drawer-right-label"
       >
-        <div className="container w-full bg-white py-6">
-          <h5 class="inline-flex items-center  text-base font-bold text-black">
+        <div className="sticky top-0 ">
+
+        <div className=" container w-full bg-white py-6">
+          <h5 className=" inline-flex items-center  text-base font-bold text-black">
             My Cart
           </h5>
         </div>
         <button
           type="button"
           data-drawer-hide="drawer-right-example"
-          aria-controls="drawer-right-example"
-          className="text-gray-700 my-6 py-1 bg-transparent hover:bg-gray-200  rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-50 dark:hover:text-black"
+          top-0    aria-controls="drawer-right-example"
+          className=" text-gray-700 my-3 py-1 bg-transparent hover:bg-gray-200  rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-50 dark:hover:text-black"
         >
           <svg
             className="w-3 h-3"
@@ -64,6 +66,8 @@ const CartModal = (props) => {
           </svg>
           <span className="sr-only">Close menu</span>
         </button>
+        </div>
+
         {/* <div className="container  flex justify-center items-center  h-44 w-full ">
           <div className="mb-30 h-36 w-36">
             <img

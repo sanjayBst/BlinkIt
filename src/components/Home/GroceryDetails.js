@@ -16,6 +16,7 @@ const GroceryDetails = () => {
     cartCtx.addItem({
       id: groceryItem.state.code,
       name: groceryItem.state.name,
+      image:groceryItem.state.images[0].url,
       amount: 1,
       price: groceryItem.state.price.value,
     });

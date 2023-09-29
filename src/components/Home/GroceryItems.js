@@ -17,6 +17,7 @@ const GroceryAPI = (props) => {
     cartCtx.addItem({
       id: item.code,
       name: item.name,
+      image:item.images[0].url,
       amount: 1,
       price: item.price.value,
     });
