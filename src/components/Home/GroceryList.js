@@ -81,7 +81,6 @@ const GroceryList = () => {
               <button
                 onClick={(e) => onClickHandler(e.currentTarget.value)}
                 value={index}
-                
               >
                 <img src={item} alt="Category images" />
               </button>

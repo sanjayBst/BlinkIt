@@ -10,8 +10,9 @@ const GroceryDetails = () => {
   const submitHandler = () => {
     // const enteredQuantity = quantityInputRef.current.value;
     // const enteredQuantityNumber = +enteredQuantity;
+    // console.log("groceryITem,",groceryItem )
+    // console.log(cartCtx)
 
-    console.log("groceryITem,",groceryItem )
     cartCtx.addItem({
       id: groceryItem.state.code,
       name: groceryItem.state.name,
@@ -60,8 +61,8 @@ const GroceryDetails = () => {
           <div className="font-bold text-sm mt-10">
             ₹ {Math.ceil(groceryItem.state.price.value * 10)}
           </div>
-          <div className=" w-16 mb-10 mt-3 rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
-            <button onClick={submitHandler}>Add</button>
+          <div className=" w-16 mb-10 mt-3 rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1 cursor-pointer" onClick={submitHandler}>
+            <button >Add</button>
           </div>
           <div className="text-md font-bold ">Why shop from blinkit?</div>
 
@@ -105,7 +106,7 @@ const GroceryDetails = () => {
               <h1 className="font-bold text-sm"> Wide Assortment</h1>
               <p className="text-xs">
                 Choose from 5000+ products across food, personal care, household
-                & other categories.{" "}
+                & other categories.
               </p>
             </div>
           </div>

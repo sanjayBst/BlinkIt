@@ -9,21 +9,17 @@ const GroceryAPI = (props) => {
   const cartCtx = useContext(CartContext);
 
   const submitHandler = (item) => {
-  
-   
-
     // console.log(quantityInputRef)
     // const enteredQuantity = quantityInputRef.current.value;
     // const enteredQuantityNumber = +enteredQuantity;
     // console.log(enteredQuantityNumber);
+    console.log(item)
     cartCtx.addItem({
       id: item.code,
       name: item.name,
       amount: 1,
       price: item.price.value,
     });
-
-    
   };
 
   const navigate = useNavigate();
@@ -35,7 +31,7 @@ const GroceryAPI = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [, setHttpError] = useState();
   useEffect(() => {
-    console.log("I am called again!")
+    // console.log("I am called again!");
     const fetchGrocery = async () => {
       const response = await fetch(
         `https://blinkit-clone-36f01-default-rtdb.firebaseio.com/${params.category}.json`
@@ -122,7 +118,9 @@ const GroceryAPI = (props) => {
                             step: "1",
                             defaultValue: "1",
                           }}
-                          onClick={()=>{submitHandler(item)}}
+                          onClick={() => {
+                            submitHandler(item);
+                          }}
                         >
                           Add
                         </button>

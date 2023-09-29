@@ -4,7 +4,6 @@ import CardCarousel from "./CardCarousel";
 import GroceryList from "./GroceryList";
 import ItemCorousel from "./ItemCorousel";
 
-
 const HomePage = () => {
   return (
     <>
@@ -19,26 +18,17 @@ const HomePage = () => {
           <GroceryList />
         </div>
         <div>
-          <div className="text-2xl font-medium" >
-          Dairy, Bread & Eggs
-          </div>
-          <ItemCorousel category="dairy"/>
+          <div className="text-2xl font-medium">Dairy, Bread & Eggs</div>
+          <ItemCorousel category="dairy" />
         </div>
         <div>
-        <div className="text-2xl font-medium">
-        Rolling paper & tobacco
-          </div>
-          <ItemCorousel category="Bakery"/>
+          <div className="text-2xl font-medium">Rolling paper & tobacco</div>
+          <ItemCorousel category="Bakery" />
         </div>
         <div>
-        <div className="text-2xl font-medium">
-        Snacks & Munchies
-          </div>
-          <ItemCorousel category="fruits"/>
+          <div className="text-2xl font-medium">Snacks & Munchies</div>
+          <ItemCorousel category="fruits" />
         </div>
-        
-         
-        
       </div>
     </>
   );
