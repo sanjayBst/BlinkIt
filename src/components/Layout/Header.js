@@ -25,7 +25,7 @@ const Header = () => {
           <span className="font-extrabold  md:text-[38px] text-yellow-300 tracking-tight">
             blink
           </span>
-          <span className="font-extrabold md:text-[38px] text-green-400 tracking-tight">
+          <span className="font-extrabold md:text-[38px] text-counter tracking-tight">
             it
           </span>
         </div>

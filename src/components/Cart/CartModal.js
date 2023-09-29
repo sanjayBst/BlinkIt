@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 
 
 import { initFlowbite } from "flowbite";
 import emptyCart from '../../assets/empty_cart.webp'
 import { Offcanvas, Ripple, initTE } from "tw-elements";
 import CartIcon from "./CartIcon";
+import CartCounter from "./CartCounter";
+import CartContext from "../../store/CartContext";
+
+
 
 initTE({ Offcanvas, Ripple });
 
 
 const ModalOverlay = (props) => {
+
+  
+  
   return (
     <div>
       <div>{props.children}</div>
@@ -18,6 +25,11 @@ const ModalOverlay = (props) => {
 };
 
 const CartModal = (props) => {
+  const cartCtx = useContext(CartContext)
+  const isCartEmpty = cartCtx.totalAmount;
+
+const styling = (isCartEmpty === 0 ? " fixed top-0 right-0 z-40 bg-white h-screen  overflow-y-auto transition-transform translate-x-full  w-96 " : " fixed top-0 right-0 z-40 bg-gray-100 h-screen  overflow-y-auto transition-transform translate-x-full  w-96 ")
+
   return (
     <>
       {/* <div className="flex items-center rounded-[6px] min-w-[112px] h-[50px] py-2 px-3 gap-2 font-bold text-sm bg-[#0c831f] cursor-pointer text-white" >
@@ -32,7 +44,7 @@ const CartModal = (props) => {
 
       <div
         id="drawer-right-example"
-        className=" fixed top-0 right-0 z-40 bg-gray-100 h-screen  overflow-y-auto transition-transform translate-x-full  w-96 dark:bg-white"
+        className={styling}
         tabindex="-1"
         aria-labelledby="drawer-right-label"
       >
@@ -68,7 +80,8 @@ const CartModal = (props) => {
         </button>
         </div>
 
-        {/* <div className="container  flex justify-center items-center  h-44 w-full ">
+     { isCartEmpty === 0 &&  <div>
+        <div className="container  flex justify-center items-center  h-44 w-full ">
           <div className="mb-30 h-36 w-36">
             <img
               src={emptyCart}
@@ -87,10 +100,13 @@ const CartModal = (props) => {
           <button type="button"
           data-drawer-hide="drawer-right-example"
           aria-controls="drawer-right-example"
-          className="   bg-green-700  text-white text-xs  py-3 px-5 rounded-lg">
+          className="   bg-counter  text-white text-xs  py-3 px-5 rounded-lg">
             Start Shopping
           </button>
-        </div> */}
+        </div>
+        </div>}
+
+        
         <div> 
         <ModalOverlay>{props.children}</ModalOverlay>
         </div>

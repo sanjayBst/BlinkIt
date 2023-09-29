@@ -8,7 +8,8 @@ const Cart = () => {
 
   const buttonStyle =
     " text-md font-light cursor-pointer px-2 py-4 rounded-md ml-4   text-white ";
-  const buttonContent = "Login to proceed >";
+  
+    const buttonContent = "Login to proceed >";
 
   console.log(cartCtx.items);
 
@@ -24,7 +25,7 @@ const Cart = () => {
             </div>
             <div className=" text-xs  basis-1/2 ">
               <li key={index}>{item.name}</li>
-              <li key={index}>{Math.ceil(item.price * 10)}</li>
+              <li key={index} className="font-bold">₹{Math.ceil(item.price * 10)}</li>
             </div>
 
             <div >
@@ -38,6 +39,9 @@ const Cart = () => {
 
   return (
     <CartModal>
+
+
+
       {cartItems}
       <div
         className="fixed bottom-0 bg-white w-96 px-4 rounded-xl "
