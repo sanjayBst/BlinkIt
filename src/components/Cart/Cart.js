@@ -5,13 +5,13 @@ import CartCounter from "./CartCounter";
 
 const Cart = () => {
   const cartCtx = useContext(CartContext);
+  const isCartEmpty = cartCtx.totalAmount;
 
   const buttonStyle =
     " text-md font-light cursor-pointer px-2 py-4 rounded-md ml-4   text-white ";
   
     const buttonContent = "Login to proceed >";
 
-  console.log(cartCtx.items);
 
   const cartItems = (
     <ul className="m-0 p-0 bg-white  list-none">
@@ -43,6 +43,8 @@ const Cart = () => {
 
 
       {cartItems}
+      {
+        isCartEmpty !== 0 &&
       <div
         className="fixed bottom-0 bg-white w-96 px-4 rounded-xl "
       >
@@ -54,6 +56,7 @@ const Cart = () => {
           <button className={buttonStyle}>{buttonContent}</button>
         </div>
       </div>
+          }
     </CartModal>
   );
 };

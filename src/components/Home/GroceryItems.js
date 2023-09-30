@@ -1,11 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable array-callback-return */
 import React from "react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import CartContext from "../../store/CartContext";
 
 const GroceryAPI = (props) => {
-  const quantityInputRef = useRef();
   const cartCtx = useContext(CartContext);
 
   const submitHandler = (item) => {
@@ -110,19 +111,7 @@ const GroceryAPI = (props) => {
                       <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1" onClick={() => {
                             submitHandler(item);
                           }}>
-                        <button
-                          ref={quantityInputRef}
-                          label="Quantity"
-                          input={{
-                            id: "quantity_" + props.id,
-                            type: "number",
-                            min: "1",
-                            max: "5",
-                            step: "1",
-                            defaultValue: "1",
-                          }}
-                          
-                        >
+                        <button>
                           Add
                         </button>
                       </div>

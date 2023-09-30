@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { useEffect, useState, useContext} from "react";
 import CartContext from "../../store/CartContext";
@@ -59,15 +61,11 @@ const ItemCorousel = (props) => {
 
   const submitHandler = (item) => {
   
-   
-
-    // console.log(quantityInputRef)
-    // const enteredQuantity = quantityInputRef.current.value;
-    // const enteredQuantityNumber = +enteredQuantity;
-    // console.log(enteredQuantityNumber);
+    console.log(item)
     cartCtx.addItem({
       id: item.code,
       name: item.name,
+      image:item.images[0].url,
       amount: 1,
       price: item.price.value,
     });
@@ -145,7 +143,7 @@ const ItemCorousel = (props) => {
                       return (
                         <Slide key={index}  index={index}>
                           <div className=" flex flex-shrink-0 relative w-full sm:w-auto">
-                            <button>
+                            <div>
                               <div key={item.code}>
                                 <div className="shadow-md rounded-lg h-72 w-44  border border-gray-200 mx-5 my-4  cursor-pointer ">
                                   <div className="object-cover object-center w-full flex items-center justify-center group relative" onClick={() => groceryDetailHandler(item)}>
@@ -174,15 +172,15 @@ const ItemCorousel = (props) => {
                                             ? 30
                                             : Math.ceil(item.price.value * 10)}
                                         </div>
-                                        <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1">
-                                          <button onClick={()=>{submitHandler(item)}} >Add</button>
+                                        <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1" onClick={()=>{submitHandler(item)}}>
+                                          <button  >Add</button>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </button>
+                            </div>
                           </div>
                         </Slide>
                       );

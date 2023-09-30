@@ -9,7 +9,7 @@ const Footer = () => {
     <div>
       <footer className="bg-white dark:bg-white">
         <div className="mx-auto w-full max-w-screen-xl">
-          <div className="gap-x-0 grid grid-cols-3  px-4 py-6 lg:py-8 md:grid-cols-6 ">
+          <div className="gap-x-10 grid grid-cols-3  px-4 py-6 lg:py-8 md:grid-cols-6 ">
             <div className="w-28">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Usefull Links
@@ -117,11 +117,11 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            <div >
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Categories
               </h2>
-              <ul className="text-sm">
+              <ul className="text-sm ">
                 <li className="mb-1">
                   <Link to="/" className=" hover:underline">
                     Vegetables & Fruits
