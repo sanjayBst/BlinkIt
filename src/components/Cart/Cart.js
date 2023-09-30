@@ -8,7 +8,7 @@ const Cart = () => {
   const isCartEmpty = cartCtx.totalAmount;
 
   const buttonStyle =
-    " text-md font-light cursor-pointer px-2 py-4 rounded-md ml-4   text-white ";
+    " text-md font-normal cursor-pointer px-2 py-4 rounded-md ml-4   text-white ";
 
   const buttonContent = "Login to proceed >";
 

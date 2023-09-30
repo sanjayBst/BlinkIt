@@ -18,27 +18,36 @@ const OrderSummary = () => {
           <span className="text-right mr-6">{"₹" + cartCtx.totalAmount}</span>
         </div>
 
-        <div className="grid grid-cols-2 text-xs ml-4 my-1 text-gray-500 ">
+        <div className="grid grid-cols-2 text-xs ml-4 my-0 text-gray-500 ">
           <span>Delivery Charge</span>
           <span className="text-right mr-6">{deliveryCondition}</span>
 
-          {cartCtx.totalAmount < 299 && (
-          <span className=" text-xs text-counter   ">
+          
+        </div>
+        <div className="ml-4">
+        {cartCtx.totalAmount < 299 && (
+          <span className=" text-xs text-counter ">
             Shop for ₹{299 - cartCtx.totalAmount} more, to save ₹30 on delivery charge
           </span>
 
           )}
         </div>
 
-        {cartCtx.totalAmount < 99 && (
-          <div className="grid grid-cols-2 text-xs ml-4  text-gray-500 ">
+          
+        
+          {cartCtx.totalAmount < 99 && (
+            <>
+            <div className="grid grid-cols-2 text-xs ml-4 mt-1  text-gray-500 ">
             <span>Small cart charge</span>
             <span className="text-right mr-6">₹10</span>
-            <span className=" text-xs text-counter  ">
+            </div>
+            <span className="ml-4 text-xs text-counter  ">
               Shop for ₹{99 - cartCtx.totalAmount} more, to remove this charge
             </span>
-          </div>
-        )}
+            </>
+          )}
+       
+        
         <div className=" grid grid-cols-2 text-sm font-medium p-3">
           <span>Grand Total</span>
           <span className="text-right mr-3">{"₹" + cartCtx.totalAmount < 99 ? smallCartCharge : deliveryCharge}</span>

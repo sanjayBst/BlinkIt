@@ -7,6 +7,7 @@ import { Offcanvas, Ripple, initTE } from "tw-elements";
 import CartIcon from "./CartIcon";
 import CartContext from "../../store/CartContext";
 import OrderSummary from "./OrderSummary";
+import CartItemCorousel from "./CartItemCorousel";
 
 initTE({ Offcanvas, Ripple });
 
@@ -45,7 +46,7 @@ const CartModal = (props) => {
             className=" text-gray-700 my-3 py-1 bg-transparent hover:bg-gray-200  rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-50 dark:hover:text-black"
           >
             <svg
-              className="w-3 h-3"
+              className="w-2 h-3"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -92,10 +93,22 @@ const CartModal = (props) => {
         <div>
           <ModalOverlay>{props.children}</ModalOverlay>
         </div>
+
+{/* <div>
+        { isCartEmpty !== 0 &&
+<CartItemCorousel/>
+}
+
+</div> */}
+
+<div>
+
        { isCartEmpty !== 0 &&
 
         <OrderSummary/>
        }
+</div>
+
       </div>
     </>
   );
