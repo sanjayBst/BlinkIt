@@ -6,6 +6,7 @@ import emptyCart from "../../assets/empty_cart.webp";
 import { Offcanvas, Ripple, initTE } from "tw-elements";
 import CartIcon from "./CartIcon";
 import CartContext from "../../store/CartContext";
+import OrderSummary from "./OrderSummary";
 
 initTE({ Offcanvas, Ripple });
 
@@ -27,13 +28,13 @@ const CartModal = (props) => {
 
       <div
         id="drawer-right-example"
-        className=" fixed  right-0 z-40 bg-gray-100 h-screen  overflow-y-auto transition-transform translate-x-full  w-96 "
+        className=" fixed  right-0 z-50  bg-gray-100 h-screen  overflow-y-auto transition-transform translate-x-full  w-96 "
         tabIndex="-1"
         aria-labelledby="drawer-right-label"
       >
         <div className="sticky top-0 w-full bg-white ">
           <div className=" container mb-3  ">
-            <h5 className=" inline-flex items-center py-6 px-7 text-base font-bold text-black ">
+            <h5 className=" inline-flex items-center py-5 px-7 text-base font-bold text-black ">
               My Cart
             </h5>
           </div>
@@ -91,6 +92,10 @@ const CartModal = (props) => {
         <div>
           <ModalOverlay>{props.children}</ModalOverlay>
         </div>
+       { isCartEmpty !== 0 &&
+
+        <OrderSummary/>
+       }
       </div>
     </>
   );

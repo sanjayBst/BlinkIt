@@ -12,6 +12,7 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { useNavigate } from "react-router-dom";
+import CartCounter from "../Cart/CartCounter";
 
 const ItemCorousel = (props) => {
   // console.log(props);
@@ -20,6 +21,7 @@ const ItemCorousel = (props) => {
   const [grocery, setGrocery] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [, setHttpError] = useState();
+  
   useEffect(() => {
     const fetchGrocery = async () => {
       const response = await fetch(
@@ -173,7 +175,10 @@ const ItemCorousel = (props) => {
                                             : Math.ceil(item.price.value * 10)}
                                         </div>
                                         <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1" onClick={()=>{submitHandler(item)}}>
-                                          <button  >Add</button>
+                                          {
+                                            submitHandler === true ? <CartCounter/> :<button>Add</button>
+                                          }
+                                          
                                         </div>
                                       </div>
                                     </div>

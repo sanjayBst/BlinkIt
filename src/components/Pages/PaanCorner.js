@@ -7,12 +7,12 @@ const PaanCorner = () => {
   const navigate = useNavigate();
 
   const homeHandler = () => {
-    console.log("Going to home...");
+    // console.log("Going to home...");
     navigate("/");
   };
 
   const paanHandler = () => {
-    console.log("Going to paan...");
+    // console.log("Going to paan...");
     navigate("/grocery/paan");
   };
   const banned = (
