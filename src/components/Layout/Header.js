@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import { FaRegUser } from "react-icons/fa";
 import Cart from "../Cart/Cart";
 import LocationDetector from "./LocationPicker";
+import LoginModal from "../Pages/LoginModal";
 
 const Header = () => {
 
- 
+ const [showModal, setShowModal] = useState(false)
  
   const navigate = useNavigate();
 
@@ -16,7 +17,7 @@ const Header = () => {
   };
 
   const authHandler = () => {
-    navigate('/login')
+    setShowModal(true)
   }
  
 
@@ -45,7 +46,7 @@ const Header = () => {
         <div className="flex items-center _header_login justify-center cursor-pointer sm:hover:bg-gray-50 max-w-[80px] lg:max-w-[160px] w-full ">
           <span className="font-normal text-xl hidden sm:block" >
             <button onClick={authHandler}>
-
+              {showModal && <LoginModal/> }
             Login
             </button>
           </span>

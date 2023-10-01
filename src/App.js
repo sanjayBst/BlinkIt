@@ -6,7 +6,6 @@ import RootLayout from "./components/Pages/Root";
 import ErrorPage from "./components/Pages/Error";
 import GroceryAPI from "./components/Home/GroceryItems";
 import GroceryDetails from "./components/Home/GroceryDetails";
-import LoginModal from "./components/Pages/LoginModal";
 
 const routers = createBrowserRouter([
   {
@@ -18,7 +17,7 @@ const routers = createBrowserRouter([
       { path: "/paan", element: <PaanCorner /> },
       { path: "/grocery/:category", element: <GroceryAPI /> },
       { path: "/grocery/products/details", element:  <GroceryDetails/> },
-      { path: "/login", element: <LoginModal/>}
+      
     ],
   },
 ]);
