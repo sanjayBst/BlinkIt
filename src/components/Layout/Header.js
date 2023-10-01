@@ -14,6 +14,10 @@ const Header = () => {
   const homeHandler = () => {
     navigate('/');
   };
+
+  const authHandler = () => {
+    navigate('/login')
+  }
  
 
   return (
@@ -39,8 +43,11 @@ const Header = () => {
         </div>
 
         <div className="flex items-center _header_login justify-center cursor-pointer sm:hover:bg-gray-50 max-w-[80px] lg:max-w-[160px] w-full ">
-          <span className="font-normal text-xl hidden sm:block">
+          <span className="font-normal text-xl hidden sm:block" >
+            <button onClick={authHandler}>
+
             Login
+            </button>
           </span>
           <span className="sm:hidden _text-default">
             <FaRegUser size={20} />

@@ -63,7 +63,7 @@ const ItemCorousel = (props) => {
 
   const submitHandler = (item) => {
   
-    console.log(item)
+    // console.log(item)
     cartCtx.addItem({
       id: item.code,
       name: item.name,

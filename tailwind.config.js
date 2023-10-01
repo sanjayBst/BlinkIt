@@ -34,6 +34,7 @@ module.exports = {
         "h-3/6": ["height: 50%"],
         
       },
+    
     },
     colors:{
       'counter':'#318616',
