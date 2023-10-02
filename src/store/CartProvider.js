@@ -4,7 +4,8 @@ import CartContext from './CartContext';
 
 const defaultCartState = {
   items: [],
-  totalAmount: 0
+  totalAmount: 0,
+  isLoggedIn: false,
 };
 
 const cartReducer = (state, action) => {
@@ -17,10 +18,23 @@ const cartReducer = (state, action) => {
     // console.log("updatedTotalAmount",updatedTotalAmount)
     return {
       items: updatedItems,
-      totalAmount: updatedTotalAmount
+      totalAmount: updatedTotalAmount,
+     
     };
   }
-  // return defaultCartState;
+  if(action.type === 'LOGIN') {
+    console.log('first login')
+    return {
+      ...state,
+      isLoggedIn: true,
+    };
+  }
+  if(action.type === 'LOGOUT') {
+    return {
+      ...state,
+      isLoggedIn: false,
+    };
+  }
 };
 
 const CartProvider = (props) => {
@@ -34,11 +48,21 @@ const CartProvider = (props) => {
     dispatchCartAction({type: 'REMOVE', id: id});
   };
 
+  const userLoggedInHandler = () => {
+    dispatchCartAction({type: 'LOGIN'});
+  }
+
+  const userLoggedOutHandler = () => {
+    dispatchCartAction({type: 'LOGOUT'});
+  }
+
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
+    userLoggedIn: userLoggedInHandler,
+    userLoggedOut: userLoggedOutHandler
   };
 
   return (
@@ -47,5 +71,7 @@ const CartProvider = (props) => {
     </CartContext.Provider>
   );
 };
+
+
 
 export default CartProvider;

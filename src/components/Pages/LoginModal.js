@@ -8,6 +8,7 @@ import { toast, Toaster } from "react-hot-toast";
 import { CgSpinner } from "react-icons/cg";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useNavigate } from "react-router-dom";
 
 const LoginModal = () => {
   const [otp, setOtp] = useState("");
@@ -15,6 +16,7 @@ const LoginModal = () => {
   const [loading, setLoading] = useState(false);
   const [showOTP, setShowOTP] = useState(false);
   const [user, setUser] = useState(null);
+  const navigate = useNavigate()
 
   function onCaptchVerify() {
     if (!window.recaptchaVerifier) {
@@ -23,6 +25,7 @@ const LoginModal = () => {
         {
           size: "invisible",
           callback: (response) => {
+            console.log("response: " + response)
             onSignup();
           },
           "expired-callback": () => {},
@@ -36,16 +39,20 @@ const LoginModal = () => {
     setLoading(true);
     onCaptchVerify();
 
+    console.log("verofied")
     const appVerifier = window.recaptchaVerifier;
+    console.log("appVerifier",appVerifier)
 
     const formatPh = "+" + ph;
-
+    console.log("formatPh "+formatPh)
     signInWithPhoneNumber(auth, formatPh, appVerifier)
       .then((confirmationResult) => {
+        console.log("confirmationResult ===>",confirmationResult)
         window.confirmationResult = confirmationResult;
         setLoading(false);
         setShowOTP(true);
         toast.success("OTP sended successfully!");
+       
       })
       .catch((error) => {
         console.log(error);
@@ -61,12 +68,17 @@ const LoginModal = () => {
         console.log(res);
         setUser(res.user);
         setLoading(false);
+        navigate('/')
       })
       .catch((err) => {
         console.log(err);
         setLoading(false);
       });
   }
+
+  const homeHandler = () => {
+    navigate('/');
+  }; 
 
   return (
     <section className="bg-emerald-500 flex items-center justify-center h-screen">
@@ -75,7 +87,18 @@ const LoginModal = () => {
         <div id="recaptcha-container"></div>
         {user ? (
           <h2 className="text-center text-white font-medium text-2xl">
-            👍Login Success
+            <button
+                          onClick={homeHandler}
+                          className="bg-counter w-72 py-2 mb-6 text-center rounded-sm text-white cursor-pointer"
+                        >
+                          {loading && (
+                            <CgSpinner
+                              size={20}
+                              className="mt-1 animate-spin"
+                            />
+                          )}
+                          <span>Verify OTP</span>
+                        </button>
            </h2>
         )  : (
           <div>

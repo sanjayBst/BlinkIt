@@ -7,16 +7,14 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyAaJY9LaVhYICPLmYC8r4G0i4pvQ20nbAk",
-  authDomain: "blinkit-clone-36f01.firebaseapp.com",
-  // databaseURL: "https://blinkit-clone-36f01-default-rtdb.firebaseio.com",
-  projectId: "blinkit-clone-36f01",
-  storageBucket: "blinkit-clone-36f01.appspot.com",
-  messagingSenderId: "584221354690",
-  appId: "1:584221354690:web:06a9755077b30f1245295b",
-  measurementId: "G-4J4DVXWQ7J"
+  apiKey: "AIzaSyA3-YwsPGzJAthsF3srKYIiXJyZlun5zzw",
+  authDomain: "blinkit-67e09.firebaseapp.com",
+  databaseURL: "https://blinkit-67e09-default-rtdb.firebaseio.com",
+  projectId: "blinkit-67e09",
+  storageBucket: "blinkit-67e09.appspot.com",
+  messagingSenderId: "662532831315",
+  appId: "1:662532831315:web:7ab4cedbddefb6d8a0eea6"
 };
 
 
