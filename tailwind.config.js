@@ -38,6 +38,8 @@ module.exports = {
     },
     colors:{
       'counter':'#318616',
+      'it': '#54B226',
+      'blink': '#F8CB45',
     }
   },
   // plugins: [],

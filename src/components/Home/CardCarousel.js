@@ -10,10 +10,10 @@ import {
 } from "pure-react-carousel";
 import card1 from "../../assets/card1.webp";
 import card2 from "../../assets/card2.avif";
-import card3 from "../../assets/card3.avif";
-import card4 from "../../assets/card4.avif";
-import card5 from "../../assets/card5.avif";
-import card6 from "../../assets/card6.avif";
+import card3 from "../../assets/electronics-WEB.avif";
+import card4 from "../../assets/pharmacy-WEB.avif";
+import card5 from "../../assets/babycare-WEB.avif";
+import card6 from "../../assets/Pet-Care_WEB.webp";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 const CardCorousel = () => {
@@ -86,22 +86,6 @@ const CardCorousel = () => {
                   <Slide index={1}>
                     <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                       <button
-                        value={"beauty"}
-                        onClick={(e) =>
-                          groceryPageHandler(e.currentTarget.value)
-                        }
-                      >
-                        <img
-                          src={card2}
-                          alt="sitting area"
-                          className="object-cover object-center w-full"
-                        />
-                      </button>
-                    </div>
-                  </Slide>
-                  <Slide index={2}>
-                    <div className="flex flex-shrink-0 relative w-full sm:w-auto">
-                      <button
                         value={"electronics"}
                         onClick={(e) =>
                           groceryPageHandler(e.currentTarget.value)
@@ -116,7 +100,7 @@ const CardCorousel = () => {
                       </button>
                     </div>
                   </Slide>
-                  <Slide index={3}>
+                  <Slide index={2}>
                     <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                       <button
                         value={"medicines"}
@@ -132,7 +116,7 @@ const CardCorousel = () => {
                       </button>
                     </div>
                   </Slide>
-                  <Slide index={4}>
+                  <Slide index={3}>
                     <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                       <button
                         value={"baby-care"}
@@ -148,7 +132,7 @@ const CardCorousel = () => {
                       </button>
                     </div>
                   </Slide>
-                  <Slide index={5}>
+                  <Slide index={4}>
                     <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                       <button
                         value={"pet-care"}
@@ -158,6 +142,22 @@ const CardCorousel = () => {
                       >
                         <img
                           src={card6}
+                          alt="sitting area"
+                          className="object-cover object-center w-full"
+                        />
+                      </button>
+                    </div>
+                  </Slide>
+                  <Slide index={5}>
+                    <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                      <button
+                        value={"beauty"}
+                        onClick={(e) =>
+                          groceryPageHandler(e.currentTarget.value)
+                        }
+                      >
+                        <img
+                          src={card2}
                           alt="sitting area"
                           className="object-cover object-center w-full"
                         />

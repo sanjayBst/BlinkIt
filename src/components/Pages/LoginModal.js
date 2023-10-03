@@ -1,5 +1,4 @@
 import React from "react";
-import { BsFillShieldLockFill } from "react-icons/bs";
 import { useState } from "react";
 import OtpInput from "otp-input-react";
 import { auth } from "../../firebase.config";
@@ -111,14 +110,15 @@ const LoginModal = () => {
                     <div className="border-0 items-center  rounded-2xl shadow-lg h-1/4 relative flex flex-col w-90 bg-gray-100 outline-none focus:outline-none">
                       <div className=" bg-white mb-16 py-6 w-full text-center rounded-t-2xl">
                         <h3 className="text-xl font-extralight mx-5 ">
-                          <BsFillShieldLockFill size={8} /> Phone Number
+                           Phone Number
                           Verification
+                          <span className="float-right text-md hover:bg-gray-100 cursor-pointer rounded-md px-2" onClick={homeHandler}>X</span>
                         </h3>
                       </div>
                       <div className="mb-5 text-sm ">
                 <label
                   htmlFor="otp"
-                  className="font-bold text-xl text-white text-center"
+                 
                 >
                   Enter your OTP
                 </label>
@@ -156,6 +156,7 @@ const LoginModal = () => {
                      <div className=" bg-white mb-16 py-6 w-full text-center rounded-t-2xl">
                        <h3 className="text-xl font-extralight mx-5 ">
                          Phone Number Verification
+                         <span className="float-right text-md hover:bg-gray-100 cursor-pointer rounded-md px-2" onClick={homeHandler}>X</span>
                        </h3>
                      </div>
 
@@ -167,7 +168,7 @@ const LoginModal = () => {
                    <div className="mb-5  ">
                        <label
                           htmlFor=""
-                        className="font-bold text-xl text-white text-center"
+                        
                           >
                        </label>
                          <PhoneInput
@@ -177,7 +178,7 @@ const LoginModal = () => {
                         />
                         <button
                           onClick={onSignup}
-                          className="bg-counter w-72 py-2 mb-6 text-center rounded-sm text-white cursor-pointer"
+                          className = { ph.length >= 12 ? "bg-counter w-72 py-2 mt-6 mb-6 text-center rounded-sm text-white cursor-pointer" : "bg-gray-300 w-72 py-2 mt-6 mb-6 text-center rounded-sm text-white  disabled:opacity-70 pointer-events-none"  }
                          >
                           {loading && (
                             <CgSpinner
@@ -185,15 +186,15 @@ const LoginModal = () => {
                               className="mt-1 animate-spin"
                             />
                           )}
-                          <span>Send code via SMS</span>
+                          <span>Next</span>
                            </button>
                 
                       
-                  <div className="text-xs text-gray-500 font-light mb-5">
+                  <div className="text-xs text-center text-gray-500 font-light mb-5">
                          <div className="mb-1">
                            By continuing, you agree to our
                          </div>
-                         <div className="text-counter underline cursor-pointer">
+                         <div className="text-counter text-center underline cursor-pointer">
                            <span className="mr-1">Terms of service</span>
                            <span className="ml-1">Privacy policy</span>
                          </div>

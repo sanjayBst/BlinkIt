@@ -1,7 +1,8 @@
 import React from "react";
 import item1 from "../../assets/item1.avif";
-import item2 from "../../assets/item2.avif";
+import item2 from "../../assets/item2.webp";
 import item3 from "../../assets/item3.avif";
+import item4 from "../../assets/item4.avif";
 import item5 from "../../assets/item5.avif";
 import item6 from "../../assets/item6.avif";
 import item7 from "../../assets/item7.avif";
@@ -9,7 +10,8 @@ import item8 from "../../assets/item8.avif";
 import item9 from "../../assets/item9.avif";
 import item10 from "../../assets/item10.avif";
 import item11 from "../../assets/item11.avif";
-import item13 from "../../assets/item13.avif";
+import item12 from "../../assets/item12.avif";
+import item13 from "../../assets/item13.webp";
 import item14 from "../../assets/item14.avif";
 import item15 from "../../assets/item15.avif";
 import item16 from "../../assets/item16.avif";
@@ -25,6 +27,7 @@ const GroceryList = () => {
     item1,
     item2,
     item3,
+    item4,
     item5,
     item6,
     item7,
@@ -32,6 +35,7 @@ const GroceryList = () => {
     item9,
     item10,
     item11,
+    item12,
     item13,
     item14,
     item15,
@@ -82,7 +86,8 @@ const GroceryList = () => {
                 onClick={(e) => onClickHandler(e.currentTarget.value)}
                 value={index}
               >
-                <img src={item} alt="Category images" />
+                <img src={item} alt="Category images" className="h-44" />
+
               </button>
             </div>
           );

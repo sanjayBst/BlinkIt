@@ -279,23 +279,29 @@ const Footer = () => {
                   alt="play-store "
                   className="w-7 md:w-8"
                 />
+                <Link to='https://play.google.com/store/apps/details?id=com.grofers.customerapp&hl=en_IN&gl=US&pli=1'>
+
                 <div className="text-left ml-3">
                   <p className="text-xs text-gray-200">Download on </p>
                   <p className="text-sm md:text-base"> Google Play Store </p>
                 </div>
+                </Link>
               </div>
               <div className="flex items-center border  rounded-lg px-4 py-2 w-52 mx-2 bg-gray-900 text-white">
+
                 <img src={logo} alt="apple-logo" className="w-7 md:w-8" />
+                <Link to="https://apps.apple.com/md/app/blinkit-grocery-in-minutes/id960335206">
                 <div className="text-left ml-3">
                   <p className="text-xs text-gray-200">Download on </p>
                   <p className="text-sm md:text-base "> Apple Store</p>
                 </div>
+                </Link>
               </div>
             </div>
             <div className="flex mt-4 space-x-5 sm:justify-center md:mt-0">
               <Link
                 to="/"
-                className="text-gray-400 hover:text-gray-900 dark:hover:text-blue-700"
+                className="text-gray-400 hover:text-blue-700 dark:hover:text-blue-700"
               >
                 <svg
                   className="w-7 h-7"
@@ -314,7 +320,7 @@ const Footer = () => {
               </Link>
               <Link
                 to="/"
-                className="text-gray-400 hover:text-gray-900 dark:hover:text-indigo-500"
+                className="text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-500"
               >
                 <svg
                   className="w-7 h-7"
@@ -329,7 +335,7 @@ const Footer = () => {
               </Link>
               <Link
                 to="/"
-                className="text-gray-400 hover:text-gray-900 dark:hover:text-blue-400"
+                className="text-gray-400 hover:text-blue-400 dark:hover:text-blue-400"
               >
                 <svg
                   className="w-7 h-7"
@@ -348,7 +354,7 @@ const Footer = () => {
               </Link>
               <Link
                 to="/"
-                className="text-gray-400 hover:text-gray-900 dark:hover:text-black"
+                className="text-gray-400 hover:text-black dark:hover:text-black"
               >
                 <svg
                   className="w-7 h-7"
@@ -367,7 +373,7 @@ const Footer = () => {
               </Link>
               <Link
                 to="/"
-                className="text-gray-400 hover:text-gray-900 dark:hover:text-orange-600"
+                className="text-gray-400 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 <svg
                   className="w-7 h-7"

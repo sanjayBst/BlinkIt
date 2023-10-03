@@ -8,7 +8,6 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useContext, useState } from "react";
 import CartContext from "../../store/CartContext";
 
-// import LoginModal from "../Pages/LoginModal";
 
 const Header = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -53,30 +52,30 @@ const cartCtx = useContext(CartContext)
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
+      <header className="flex overflow-x-auto flex-row border sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
         <div className="_header sm:flex ">
           <div
-            className="hidden sm:flex max-w-[150px] md:max-w-[178px] w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light"
+            className=" basis-1/6 sm:flex font-extrabold max-w-[150px] md:max-w-[178px] px-8  w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light"
             onClick={homeHandler}
           >
-            <span className="font-extrabold  md:text-[38px] text-yellow-300 tracking-tight">
+            <span className="  md:text-[38px] text-blink tracking-tight">
               blink
             </span>
-            <span className="font-extrabold md:text-[38px] text-counter tracking-tight">
+            <span className=" md:text-[38px] text-it tracking-tight">
               it
             </span>
           </div>
 
-          <div className="w-full sm:w-[240px] xl:w-[320px] py-4 px-1 sm:p-0 _header_loc flex items-center sm:justify-center cursor-pointer sm:hover:bg-gray-50">
+          <div className="w-fit basis-1/6 sm:w-[240px] xl:w-[320px] py-4 px-10  mr-9 sm:p-0 _header_loc flex items-center sm:justify-center cursor-pointer sm:hover:bg-gray-50">
             <LocationDetector />
           </div>
 
-          <div className="flex-1 relative _header_search">
+          <div className="flex-1 mt-1 basis-2/6 relative _header_search  ">
             <SearchBar />
           </div>
 
-          <div className="flex items-center _header_login justify-center cursor-pointer sm:hover:bg-gray-50 max-w-[80px] lg:max-w-[160px] w-full ">
-            <span className="font-normal text-xl hidden sm:block">
+          <div className="flex items-center mx-16 _header_login justify-center cursor-pointer sm:hover:bg-gray-50 max-w-[80px] lg:max-w-[160px] w-full ">
+            <span className="font-normal basis-1/6  text-xl hidden sm:block">
               {/* <button onClick={authHandler}>
               {showModal && <LoginModal/> }
             Login
@@ -85,14 +84,17 @@ const cartCtx = useContext(CartContext)
 
               {!isLogin && <button onClick={loginHandler}>Login</button>}
             </span>
-            <span className="sm:hidden _text-default">
-              <FaRegUser size={20} />
-            </span>
-            <div className="container mx-auto p-4">
-              <Cart />
-            </div>
-            <></>
+            
           </div>
+            <> <span className="basis-1/6   cursor-pointer">
+
+<span className="sm:hidden _text-default  sm:hover:bg-gray-50 ">
+  <FaRegUser size={20} />
+</span>
+<div className="container mx-auto  p-4">
+  <Cart />
+</div>
+</span> </>
         </div>
       </header>
     </>
