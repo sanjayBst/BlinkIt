@@ -281,7 +281,7 @@ const Footer = () => {
                 />
                 <Link to='https://play.google.com/store/apps/details?id=com.grofers.customerapp&hl=en_IN&gl=US&pli=1'>
 
-                <div className="text-left ml-3">
+                <div className="t`ext-left ml-3">
                   <p className="text-xs text-gray-200">Download on </p>
                   <p className="text-sm md:text-base"> Google Play Store </p>
                 </div>

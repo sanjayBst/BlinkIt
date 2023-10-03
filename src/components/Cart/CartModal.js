@@ -7,7 +7,6 @@ import { Offcanvas, Ripple, initTE } from "tw-elements";
 import CartIcon from "./CartIcon";
 import CartContext from "../../store/CartContext";
 import OrderSummary from "./OrderSummary";
-import CartItemCorousel from "./CartItemCorousel";
 
 initTE({ Offcanvas, Ripple });
 
@@ -18,6 +17,8 @@ const ModalOverlay = (props) => {
     </div>
   );
 };
+
+
 
 const CartModal = (props) => {
   const cartCtx = useContext(CartContext);
@@ -64,8 +65,8 @@ const CartModal = (props) => {
           </button>
         </div>
 
-        {isCartEmpty === 0 && (
-          <div className="bg-white mx-2 py-4 rounded-xl h-fill">
+        {isCartEmpty  === 0  && (
+          <div className="bg-white mx-4 my-4 w-11/12 py-4 rounded-xl h-fill">
             <div className="container  flex justify-center items-center  h-44 w-full ">
               <div className="mb-30 h-36 w-36">
                 <img src={emptyCart} alt="Cart" className="mx-auto block" />
@@ -106,6 +107,7 @@ const CartModal = (props) => {
        { isCartEmpty !== 0 &&
 
         <OrderSummary/>
+        
        }
 </div>
 

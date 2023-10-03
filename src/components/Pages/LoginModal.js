@@ -133,7 +133,7 @@ const LoginModal = () => {
                         ></OtpInput>
                  <button
                           onClick={onOTPVerify}
-                          className="bg-counter w-72 py-2 mb-6 text-center rounded-sm text-white cursor-pointer"
+                          className="bg-counter w-72 py-2 mt-6 mb-6 text-center rounded-sm text-white cursor-pointer"
                         >
                           {loading && (
                             <CgSpinner

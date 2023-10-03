@@ -10,7 +10,7 @@ const OrderSummary = () => {
 
   return (
     <>
-      <div className=" container  my-4 w-100% h-fill bg-white rounded-xl items-center ">
+      <div className=" container mx-4 my-4 w-11/12 h-fill bg-white rounded-xl items-center ">
         <div className="text-sm font-bold p-3">Bill Details</div>
 
         <div className="grid grid-cols-2  gap-4 text-xs ml-4 my-1 text-gray-500 ">
@@ -56,6 +56,13 @@ const OrderSummary = () => {
         Coupons are only applicable on the Blinkit app
         </div>
       </div>
+        <div className="container mx-4 my-4 w-11/12 h-fill bg-white pr-6 rounded-xl items-center mb-8">
+          <h3 className="text-sm font-bold p-3" >Cancellation Policy</h3>
+          <p className="text-xs text-gray-400 font-medium pl-4 mb-7 rounded-xl py-2" >Orders cannot be cancelled once packed for delivery. In case of unexpected delays, a refund will be provided, if applicable.</p>
+        </div>
+        <div className="mb-28">
+
+        </div>
     </>
   );
 };

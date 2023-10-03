@@ -5,15 +5,31 @@ import CartContext from './CartContext';
 const defaultCartState = {
   items: [],
   totalAmount: 0,
-  isLoggedIn: false,
+ 
 };
 
 const cartReducer = (state, action) => {
   if (action.type === 'ADD') {
 
-    // console.log("hey we reached here", typeof action.item.price, typeof action.item.amount);
-    const updatedItems = state.items.concat(action.item);
+    
     const updatedTotalAmount = state.totalAmount + Math.round(action.item.price * action.item.amount*10);
+
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.item.id
+    );
+
+    const existingCartItem = state.items[existingCartItemIndex];
+    let updatedItems;
+
+    if (existingCartItem) {
+      const updatedItem = {
+        ...existingCartItem,
+      };
+      updatedItems = [...state.items];
+      updatedItems[existingCartItemIndex] = updatedItem;
+    } else {
+      updatedItems = state.items.concat(action.item);
+    }
 
     // console.log("updatedTotalAmount",updatedTotalAmount)
     return {
@@ -22,20 +38,31 @@ const cartReducer = (state, action) => {
      
     };
   }
-  if(action.type === 'LOGIN') {
-    console.log('first login')
+
+  if (action.type === "REMOVE") {
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.id
+    );
+    const existingItem = state.items[existingCartItemIndex];
+    const updatedTotalAmount = state.totalAmount - Math.round(existingItem.price *10);
+    let updatedItems;
+
+    if (existingItem.amount === 1) {
+      updatedItems = state.items.filter((item) => item.id !== action.id);
+    } else {
+      const updatedItem = {
+        ...existingItem,
+        amount: existingItem.amount - 1,
+      };
+      updatedItems = [...state.items];
+      updatedItems[existingCartItemIndex] = updatedItem;
+    }
     return {
-      ...state,
-      isLoggedIn: true,
+      items: updatedItems,
+      totalAmount: updatedTotalAmount,
     };
   }
-  if(action.type === 'LOGOUT') {
-    return {
-      ...state,
-      isLoggedIn: false,
-    };
-  }
-};
+}
 
 const CartProvider = (props) => {
   const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState);
@@ -48,21 +75,13 @@ const CartProvider = (props) => {
     dispatchCartAction({type: 'REMOVE', id: id});
   };
 
-  const userLoggedInHandler = () => {
-    dispatchCartAction({type: 'LOGIN'});
-  }
-
-  const userLoggedOutHandler = () => {
-    dispatchCartAction({type: 'LOGOUT'});
-  }
-
+  
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
-    userLoggedIn: userLoggedInHandler,
-    userLoggedOut: userLoggedOutHandler
+    
   };
 
   return (

@@ -1,36 +1,34 @@
-// import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import { FaRegUser } from "react-icons/fa";
 import Cart from "../Cart/Cart";
 import LocationDetector from "./LocationPicker";
-import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
-import { useContext, useState } from "react";
-import CartContext from "../../store/CartContext";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useState } from "react";
 
 
 const Header = () => {
   const [isLogin, setIsLogin] = useState(false);
 
-const cartCtx = useContext(CartContext)
+
 
   const navigate = useNavigate();
   const auth = getAuth();
   onAuthStateChanged(auth, (user) => {
     if (user) {
-
+setIsLogin(true)
       const uid = user.uid;
-      cartCtx.userLoggedIn();
+      
       console.log(uid);
     }
   });
 
   const logoutHandler = () => {
        
-   signOut()
+   auth.signOut()
       .then(() => {
         setIsLogin(false);
-        cartCtx.userLoggedOut();
+    
         console.log("sucessfully LoggedOut");
       })
       .catch((error) => {
