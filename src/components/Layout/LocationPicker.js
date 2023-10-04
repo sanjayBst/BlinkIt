@@ -29,8 +29,8 @@ function LocationDetector() {
       {location ? (
         <div>
          
-          <p> {location.latitude}</p>
-          <p> {location.longitude}</p>
+          <p className='font-bold text-sm' >Delivery in 12 minutes</p>
+          <p className='font-extrathin text-xs'>Dummy Address</p>
     
         </div>
       ) : error ? (

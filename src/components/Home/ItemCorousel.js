@@ -34,7 +34,7 @@ const ItemCorousel = (props) => {
       }
       const responseData = await response.json();
 
-      const slicedData = responseData.slice(10, 200);
+      const slicedData = responseData.slice(10, 50);
       setGrocery(slicedData);
       //   console.log(responseData)
 
@@ -76,7 +76,7 @@ const ItemCorousel = (props) => {
   };
 
   return (
-    <div className="container overflow-hidden mx-auto w-sm">
+    <div className=" container overflow-hidden mx-auto w-sm">
       <div className="flex  items-center justify-center w-100 h-3/4 sm:py-5 px-1">
         <CarouselProvider
           className="lg:block hidden"

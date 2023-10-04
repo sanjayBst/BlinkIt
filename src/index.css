@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
 
 .react-tel-input .form-control {
   @apply !w-full py-6 !text-base;

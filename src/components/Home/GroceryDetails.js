@@ -16,7 +16,7 @@ const GroceryDetails = () => {
     cartCtx.addItem({
       id: groceryItem.state.code,
       name: groceryItem.state.name,
-      image:groceryItem.state.images[0].url,
+      image: groceryItem.state.images[0].url,
       amount: 1,
       price: groceryItem.state.price.value,
     });
@@ -62,8 +62,11 @@ const GroceryDetails = () => {
           <div className="font-bold text-sm mt-10">
             ₹ {Math.ceil(groceryItem.state.price.value * 10)}
           </div>
-          <div className=" w-16 mb-10 mt-3 rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1 cursor-pointer" onClick={submitHandler}>
-            <button >Add</button>
+          <div
+            className=" w-16 mb-10 mt-3 rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1 cursor-pointer"
+            onClick={submitHandler}
+          >
+            <button>Add</button>
           </div>
           <div className="text-md font-bold ">Why shop from blinkit?</div>
 

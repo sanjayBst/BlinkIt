@@ -51,20 +51,23 @@ const GroceryList = () => {
   categoryMap.set("1", "dairy");
   categoryMap.set("2", "fruits");
   categoryMap.set("3", "soft-dinks");
-  categoryMap.set("4", "breakfast");
-  categoryMap.set("5", "ice-cream");
-  categoryMap.set("6", "Bakery");
-  categoryMap.set("7", "beverages");
-  categoryMap.set("8", "kitchen");
-  categoryMap.set("9", "spreads");
-  categoryMap.set("10", "chicken");
-  categoryMap.set("11", "baby-care");
-  categoryMap.set("12", "medicines");
-  categoryMap.set("13", "cleaning");
-  categoryMap.set("14", "stationery");
-  categoryMap.set("15", "masala");
-  categoryMap.set("16", "personal-care");
-  categoryMap.set("17", "pet-care");
+  categoryMap.set("4", "snacks");
+  categoryMap.set("5", "breakfast");
+  categoryMap.set("6", "ice-cream");
+  categoryMap.set("7", "Bakery");
+  categoryMap.set("8", "beverages");
+  categoryMap.set("9", "kitchen");
+  categoryMap.set("10", "masala");
+  categoryMap.set("11", "spreads");
+  categoryMap.set("12", "chicken");
+  categoryMap.set("13", "kitchen");
+  categoryMap.set("14", "baby-care");
+  categoryMap.set("15", "medicines");
+  categoryMap.set("16", "cleaning");
+  categoryMap.set("17", "stationery");
+  categoryMap.set("18", "masala");
+  categoryMap.set("19", "personal-care");
+  categoryMap.set("20", "pet-care");
 
   const onClickHandler = (value) => {
     // console.log(categoryMap);
@@ -75,12 +78,12 @@ const GroceryList = () => {
 
   return (
     <>
-      <div className="flex flex-wrap items-center justify-center mx-3">
+      <div className="flex flex-wrap  items-center justify-center mx-3">
         {arr.map((item, index) => {
           return (
             <div
               key={index}
-              className="flex-auto flex-shrink-0  w-10 sm:w-auto"
+              className="flex-auto flex-shrink-0  "
             >
               <button
                 onClick={(e) => onClickHandler(e.currentTarget.value)}

@@ -19,8 +19,9 @@ const ModalOverlay = (props) => {
 };
 
 
-
 const CartModal = (props) => {
+ 
+  
   const cartCtx = useContext(CartContext);
   const isCartEmpty = cartCtx.totalAmount;
 

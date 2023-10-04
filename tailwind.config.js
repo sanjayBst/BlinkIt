@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "Gilroy-Bold": ["Gilroy-Bold", "sans-serif"],
+        "sans": ["Gilroy-Bold", "sans-serif"],
         "Gilroy-Heavy": ["Gilroy-Heavy", "sans-serif"],
         "Gilroy-Light": ["Gilroy-Light", "sans-serif"],
         "Gilroy-Medium": ["Gilroy-Medium", "sans-serif"],
@@ -40,6 +40,7 @@ module.exports = {
       'counter':'#318616',
       'it': '#54B226',
       'blink': '#F8CB45',
+      'custom-green':'#328616'
     }
   },
   // plugins: [],

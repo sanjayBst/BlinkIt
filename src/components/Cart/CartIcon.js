@@ -21,7 +21,7 @@ const CartIcon = () => {
 
           <BsCart3 size={22} className="_wiggle " style={{strokeWidth:'0.4'}} />
 
-          <div className="flex flex-col font-bold text-[12px] leading-none">
+          <div className="flex flex-col font-Gilroy-Bold text-sm  leading-none">
             <span>
               {numberOfCartItems === 0
                 ? "My Cart"

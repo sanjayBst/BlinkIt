@@ -43,7 +43,7 @@ const PaanCorner = () => {
               <div className="border-0 rounded-3xl shadow-lg h-90 relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between  m-5  rounded-t">
-                  <h3 className="text-xl font-semibold  mb-0 mt-0">
+                  <h3 className="font-Gilroy-Bold text-2xl font-semibold  mb-0 mt-0">
                     Please make sure...
                   </h3>
                   <button
@@ -80,7 +80,7 @@ const PaanCorner = () => {
                   <p className="my-4 text-black text-xs">
                     We are bound to report your account in case of any
                     transgressions!
-                    <div className="text-green-600 hover:text-green-400 underline decoration-dashed cursor-pointer">
+                    <div className="text-custom-green hover:text-green-600 underline decoration-dashed cursor-pointer">
                       <p>Read Terms & Conditions </p>
                     </div>
                   </p>
@@ -88,14 +88,14 @@ const PaanCorner = () => {
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6  rounded-b">
                   <button
-                    className="text-green-700 background-transparent  border border-green-700 hover:bg-green-700  hover:text-white uppercase px-20 py-3 text-sm outline-none focus:outline-none mr-4 mb-0 ease-linear transition-all duration-150 rounded-lg"
+                    className="text-green-700 background-transparent  border border-custom-green hover:bg-custom-green  hover:text-white uppercase px-20 py-3 text-sm outline-none focus:outline-none mr-4 mb-0 ease-linear transition-all duration-150 rounded-lg"
                     type="button"
                     onClick={homeHandler}
                   >
                     Cancel
                   </button>
                   <button
-                    className="bg-green-700 hover:bg-green-500 text-white active:bg-emerald-600 uppercase text-sm px-20 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-0 ease-linear transition-all duration-150 rounded-lg"
+                    className="bg-custom-green hover:bg-green-400 text-white active:bg-emerald-600 uppercase text-sm px-20 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-0 ease-linear transition-all duration-150 rounded-lg"
                     type="button"
                     onClick={paanHandler}
                   >
