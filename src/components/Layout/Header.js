@@ -50,10 +50,10 @@ setIsLogin(true)
 
   return (
     <>
-      <header className="flex overflow-x-auto flex-row border sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
+      <header className="flex overflow-x-auto sm:block border sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
         <div className="_header sm:flex ">
           <div
-            className="hidden lg:block basis-1/6 sm:flex mt-3 font-extrabold max-w-[150px] md:max-w-[178px] px-8  w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light"
+            className=" basis-1/6  sm:hidden md:flex mt-3 font-extrabold max-w-[150px] md:max-w-[768px] px-8  w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light"
             onClick={homeHandler}
           >
             <span className=" font-Gilroy-Bold-400 md:text-[38px] text-blink tracking-tight">
@@ -64,22 +64,25 @@ setIsLogin(true)
             </span>
           </div>
 
-          <div className="flex w-fit basis-1/6 sm:w-[240px] xl:w-[320px] py-4 px-10  mr-9 sm:p-0  _header_loc items-center sm:justify-end cursor-pointer sm:hover:bg-gray-50">
-            <LocationDetector className='float-right' />
-            <span className="sm:hidden _text-default pl-8 sm:hover:bg-gray-50 ">
+          <div className=" sm:block md:flex md:basis-4/6 md:mx-0 md:px-0 md:float-left   sm:ml-3 sm:py-5 sm:basis-11/12  flex w-fit  sm:w-20  py-4   mr-9 sm:p-0  _header_loc items-center sm:justify-end md:justify-start cursor-pointer sm:hover:bg-gray-50">
+            <LocationDetector className='float-right  sm:w-80' />
+            <span className="md:basis-5/6">
+
+            <SearchBar />
+            </span>
+          </div>
+
+          {/* <div className="flex-1 mt-1  2  basis-2/6 relative _header_search  "> */}
+            <span className=" _text-default sm:mt-4 1/10 sm:py-5 lg:hidden  sm:mr-7 text-right pl-8 sm:hover:bg-gray-50 ">
   
   {isLogin && <button onClick={logoutHandler}>Logout</button>}
 
               {!isLogin && <button onClick={loginHandler}><FaRegUser size={20}  /></button>}
 </span>
-          </div>
+          {/* </div> */}
 
-          <div className="flex-1 mt-1 sm:mt-0 basis-2/6 relative _header_search  ">
-            <SearchBar />
-          </div>
-
-          <div className="flex items-center mx-16 _header_login justify-center cursor-pointer sm:hover:bg-gray-50 max-w-[80px] lg:max-w-[160px] w-full ">
-            <span className="font-normal basis-1/6  text-xl hidden sm:block">
+          <div className="flex sm:hidden items-center  mx-16 _header_login justify-center cursor-pointer sm:hover:bg-gray-50 max-w-[80px] lg:max-w-[160px] w-full ">
+            <span className="font-normal basis-1/6  text-xl  sm:hidden">
               
               {isLogin && <button onClick={logoutHandler}>Logout</button>}
 
@@ -87,10 +90,10 @@ setIsLogin(true)
             </span>
             
           </div>
-            <> <span className="basis-1/6   cursor-pointer">
+            <> <span className="sm:hidden lg:flex lg:mt-4 lg:ml-9 basis-1/6   cursor-pointer">
 
 
-<div className="hidden lg:block container mx-auto  p-4">
+<div className="  container mx-auto  p-4">
   <Cart />
 </div>
 </span> </>

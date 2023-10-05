@@ -80,7 +80,7 @@ const LoginModal = () => {
   }; 
 
   return (
-    <section className="bg-emerald-500 flex items-center justify-center h-screen">
+    <section className="bg-gray-100  flex items-center justify-center h-screen">
      <div>
         <Toaster toastOptions={{ duration: 4000 }} />
         <div id="recaptcha-container"></div>
@@ -105,7 +105,7 @@ const LoginModal = () => {
             
             {showOTP ? (
               <>
-                <div className="justify-center backdrop-brightness-50 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+                <div className="justify-center backdrop-brightness-50  items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
                   <div className="relative pr-4 w-5/12 ">
                     <div className="border-0 items-center  rounded-2xl shadow-lg h-1/4 relative flex flex-col w-90 bg-gray-100 outline-none focus:outline-none">
                       <div className=" bg-white mb-16 py-6 w-full text-center rounded-t-2xl">
@@ -151,8 +151,8 @@ const LoginModal = () => {
            ) : (
          <>
            <div className="justify-center backdrop-brightness-50 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-             <div className="relative pr-4 w-5/12 ">
-                <div className="border-0 items-center  rounded-2xl shadow-lg h-1/4 relative flex flex-col w-90 bg-gray-100 outline-none focus:outline-none">
+             <div className="relative pr-4 sm:h-fit sm:w-full md:h-fit md:w-2/4 w-5/12 ">
+                <div className="border-0 items-center  rounded-2xl shadow-lg h-1/4  relative flex flex-col w-90 bg-gray-100 outline-none focus:outline-none">
                      <div className=" bg-white mb-16 py-6 w-full text-center rounded-t-2xl">
                        <h3 className="text-xl font-extralight mx-5 ">
                          Phone Number Verification

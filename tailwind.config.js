@@ -41,7 +41,13 @@ module.exports = {
       'it': '#54B226',
       'blink': '#F8CB45',
       'custom-green':'#328616'
-    }
+    },
+    screens: {
+      'sm': '320px',  // Small screens like mobile phones
+      'md': '700px',  // Medium screens like tablets
+      'lg': '1024px', // Large screens like laptops
+      'xl': '1280px', // Extra-large screens like desktops
+    },
   },
   // plugins: [],
 };

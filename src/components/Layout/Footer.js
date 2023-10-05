@@ -7,7 +7,7 @@ const Footer = () => {
   
   return (
     <div>
-      <footer className="bg-white dark:bg-white">
+      <footer className="bg-white dark:bg-white ">
         <div className="mx-auto w-full max-w-screen-xl">
           <div className="gap-x-10 grid grid-cols-3  px-4 py-6 lg:py-8 md:grid-cols-6 ">
             <div className="w-28">
@@ -266,13 +266,13 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="px-4 py-6 bg-gray-50 dark:bg-gray-50 md:flex md:items-center md:justify-between">
+          <div className="px-4 py-6 bg-gray-50 dark:bg-gray-50 lg:flex lg:items-center lg:justify-between">
             <span className="text-xs text-gray-500  xs:text-left">
               © Blink Commerce Private Limited (formerly known as Grofers India
               <br /> Private Limited), 2016-2023
             </span>
 
-            <div className="flex justify-center ">
+            <div className="flex md:py-5 justify-center ">
               <div className="flex items-center border w-auto rounded-lg px-4 py-2  mx-2 bg-gray-900 text-white">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/888/888857.png"
