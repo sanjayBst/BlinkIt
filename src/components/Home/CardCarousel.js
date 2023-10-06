@@ -22,19 +22,21 @@ const CardCorousel = () => {
   const navigate = useNavigate();
 
   const groceryPageHandler = (value) => {
-    console.log(value);
+    // console.log(value);
     navigate(`/grocery/${value}`);
   };
-
+ const slideShowing = window.innerWidth > 490 ? 3.4 : 1;
+ 
+  
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto"  >
       <div className="flex items-center justify-center w-80% h-3/4 sm:py-5 px-1">
         <CarouselProvider
-          className="lg:block hidden"
+          className="lg:block "
           naturalSlideWidth={100}
           isIntrinsicHeight={true}
           totalSlides={6}
-          visibleSlides={3.4}
+          visibleSlides={slideShowing}
           step={1}
           infinite={true}
         >
@@ -42,12 +44,12 @@ const CardCorousel = () => {
           <ButtonBack
               role="button"
               aria-label="slide backward"
-              className="absolute z-30 left-0 ml-10 bg-gray-200 p-3 rounded-full cursor-pointer"
+              className="absolute z-30 left-0 sm:ml-1  lg:ml-2 bg-gray-200 p-3 rounded-full cursor-pointer"
               id="prev"
+             
             >
               <svg
-                width={18}
-                height={18}
+                className="sm:h-2 sm:w-2"
                 viewBox="0 0 6 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -170,12 +172,11 @@ const CardCorousel = () => {
             <ButtonNext
               role="button"
               aria-label="slide forward"
-              className="absolute z-30 right-0 mr-8 bg-gray-200 p-3 rounded-full"
+              className="absolute z-30 right-0 sm:mr-0 lg:mr-2 bg-gray-200 p-3 rounded-full"
               id="next"
             >
               <svg
-                width={18}
-                height={18}
+                className="sm:h-2 sm:w-2"
                 viewBox="0 0 6 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

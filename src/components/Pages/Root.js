@@ -12,6 +12,7 @@ const RootLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      
     </CartProvider>
   );
 };

@@ -29,6 +29,9 @@ const HomePage = () => {
           <div className= "sm:text-md md:text-lg lg:text-2xl font-medium mt-2">Snacks & Munchies</div>
           <ItemCorousel category="fruits" />
         </div>
+        
+          
+        
       </div>
     </>
   );

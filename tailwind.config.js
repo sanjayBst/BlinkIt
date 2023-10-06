@@ -45,8 +45,8 @@ module.exports = {
     screens: {
       'sm': '320px',  // Small screens like mobile phones
       'md': '700px',  // Medium screens like tablets
-      'lg': '1024px', // Large screens like laptops
-      'xl': '1280px', // Extra-large screens like desktops
+      'lg': '1240px', // Large screens like laptops
+      // 'xl': '1440px', // Extra-large screens like desktops
     },
   },
   // plugins: [],

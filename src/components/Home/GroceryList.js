@@ -88,7 +88,7 @@ const GroceryList = () => {
                 onClick={(e) => onClickHandler(e.currentTarget.value)}
                 value={index}
               >
-                <img src={item} alt="Category images" className="lg:h-44 lg:w-24 sm:w-16 sm:h-28 md:w-32 md:h-40 " />
+                <img src={item} alt="Category images" className="lg:h-44 lg:w-28  sm:w-16 sm:h-28 md:w-32 md:h-40 " />
 
               </button>
             </div>

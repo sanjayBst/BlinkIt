@@ -74,17 +74,17 @@ const GroceryAPI = (props) => {
         if (item.images) {
           return (
             <div key={item.code}>
-              <div className="shadow-md rounded-lg h-72 w-44 border border-gray-200 mx-5 my-4  cursor-pointer ">
+              <div className="shadow-md rounded-lg lg:h-72 lg:w-44 sm:w-36 sm:h-52  border border-gray-200 lg:mx-5 sm:mx-2 my-4  cursor-pointer ">
                 <div
                   onClick={() => groceryDetailHandler(item)}
-                  className="group relative"
+                  className="group  relative"
                 >
                   <img
-                    className="rounded-t-lg h-32 "
+                    className=" rounded-t-lg  sm:h-28 sm:w-24 lg:h-36 lg:w-32 "
                     src={item.images[0].url}
                     alt="img"
                   />
-                  <div className="p-10 h-38 absolute inset-0 bg-gray-800 bg-opacity-75 text-white opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out flex items-center justify-center">
+                  <div className="p-10 sm:text-xs h-38 absolute inset-0 bg-gray-800 bg-opacity-75 text-white opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out flex items-center justify-center">
                     {item.name}
                   </div>
                 </div>
@@ -95,23 +95,23 @@ const GroceryAPI = (props) => {
                     </h5>
                   </div>
 
-                  <div className=" my-14 h-9 w-36 p-2">
+                  <div className=" lg:my-14 sm:mt-0 sm:my-3 sm:text-xs  h-9 w-36 p-2">
                     <div
-                      className="grid grid-cols-2          
+                      className="grid grid-cols-2 sm:ml-0          
   
                     divide-green-500"
                     >
-                      <div className="mr-1 text-left">
+                      <div className="mr-1 sm:mr-0 text-left">
                         ₹
                         {item.price === undefined ||
                         item.price.value === undefined
                           ? 30
                           : Math.ceil(item.price.value * 10)}
                       </div>
-                      <div className="rounded-lg text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1" onClick={() => {
+                      <div className="rounded-lg sm:ml-0 lg: sm:text-[10px] sm:py-0 sm:mr-8   lg:py-1 lg:mx-1  lg:text-sm  text-center border border-green-900 text-green-700 hover:bg-green-600 hover:border-none hover:text-white font-bold p-1" onClick={() => {
                             submitHandler(item);
                           }}>
-                        <button>
+                        <button >
                           Add
                         </button>
                       </div>
