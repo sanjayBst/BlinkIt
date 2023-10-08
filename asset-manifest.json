@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.32dc4320.css",
+    "main.js": "/static/js/main.66bdb341.js",
+    "static/js/333.c5b393c7.chunk.js": "/static/js/333.c5b393c7.chunk.js",
+    "static/js/481.b94e6bb3.chunk.js": "/static/js/481.b94e6bb3.chunk.js",
+    "static/media/card1.webp": "/static/media/card1.3532a3d5dc8f4b7d9692.webp",
+    "static/media/404_error.jpg": "/static/media/404_error.45e175448a8f57360e51.jpg",
+    "static/media/banner.webp": "/static/media/banner.311362e4074056af383c.webp",
+    "static/media/Pet-Care_WEB.webp": "/static/media/Pet-Care_WEB.e577efc5717b45967428.webp",
+    "static/media/empty_cart.webp": "/static/media/empty_cart.86dd06ae34db3f69debd.webp",
+    "static/media/pharmacy-WEB.avif": "/static/media/pharmacy-WEB.ae9f3290268cc967ab54.avif",
+    "static/media/electronics-WEB.avif": "/static/media/electronics-WEB.b0c2317d7eb5a88c54c2.avif",
+    "static/media/babycare-WEB.avif": "/static/media/babycare-WEB.9b1f91b64ccdec55f055.avif",
+    "static/media/item2.webp": "/static/media/item2.24c61759ed0cae7d326c.webp",
+    "static/media/item12.avif": "/static/media/item12.736c1deba1fcf9d62ccd.avif",
+    "static/media/item17.avif": "/static/media/item17.468fd14838107ee7d4cd.avif",
+    "static/media/item20.avif": "/static/media/item20.67d4f29ecdb439cfdd02.avif",
+    "static/media/card2.avif": "/static/media/card2.29515353dcd837dac4cb.avif",
+    "static/media/item6.avif": "/static/media/item6.e8102a32b16100c573e1.avif",
+    "static/media/item13.webp": "/static/media/item13.adf154c32e9959ae3002.webp",
+    "static/media/item15.avif": "/static/media/item15.c10b158eb71db87b73f0.avif",
+    "static/media/item11.avif": "/static/media/item11.de65aaa93fea7f61b617.avif",
+    "static/media/item5.avif": "/static/media/item5.122a046fe68af4459bb4.avif",
+    "static/media/item19.avif": "/static/media/item19.42267b220e3638aa9959.avif",
+    "static/media/item16.avif": "/static/media/item16.951b65223796ff1025f5.avif",
+    "static/media/item9.avif": "/static/media/item9.160f4b781d780725f5f0.avif",
+    "static/media/item14.avif": "/static/media/item14.b12795b3a0b7b8b94431.avif",
+    "static/media/item8.avif": "/static/media/item8.3008fa8a236db179147a.avif",
+    "static/media/item4.avif": "/static/media/item4.0601ba53a73fe231d0c6.avif",
+    "static/media/item10.avif": "/static/media/item10.8ffe17cdeac98a6c5e94.avif",
+    "static/media/item7.avif": "/static/media/item7.419de2beb2b071ef5f60.avif",
+    "static/media/item18.avif": "/static/media/item18.1beea09aa7387f1f85f4.avif",
+    "static/media/item1.avif": "/static/media/item1.fb4ec69ad2aa9cd60cca.avif",
+    "static/media/item3.avif": "/static/media/item3.ce2696c7d1048bdbb190.avif",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.32dc4320.css",
+    "static/js/main.66bdb341.js"
+  ]
+}
