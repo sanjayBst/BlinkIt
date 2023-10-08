@@ -1,14 +1,14 @@
 import React from "react";
 // import classes from './Error.module.css';
 import Header from "../Layout/Header";
+import error from '../../assets/404_error.jpg'
 
 const ErrorPage = () => {
   return (
     <>
       <Header />
-      <main >
-        <h1>An error occurred !</h1>
-        <p>may be this page can't exist</p>
+      <main className="flex items-center justify-center h-[420px] w-fit" >
+        <img src={error} alt="may be this page can't exist" className="bg-cover " />
       </main>
     </>
   );

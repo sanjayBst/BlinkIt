@@ -47,7 +47,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex overflow-hidden sm:block border sm:w-[345px] lg:w-full sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
+      <header className="flex overflow-hidden sm:block border sm:w-[345px] md:w-full sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
         <div className="_header sm:flex sm:h-20  lg:h-24">
           <div
             className=" basis-1/6  sm:hidden md:flex mt-3 font-extrabold max-w-[150px] md:max-w-[768px] px-8  w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light"

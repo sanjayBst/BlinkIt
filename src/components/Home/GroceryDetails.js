@@ -27,7 +27,7 @@ const GroceryDetails = () => {
           <div className="object-center   border border-gray-200 float-left ">
             <img
               src={groceryItem.state.images[0].url}
-              className="flex  object-cover  sm:h-52 sm:pl-24  sm:w-60  md:px-0 md:ml-20 md:h-96 md:w-44 "
+              className="flex  object-cover  sm:h-52 sm:pl-24  sm:w-60  md:px-0 md:ml-2 md:h-96 md:w-fit "
               alt="Grocery Item"
             />
           </div>

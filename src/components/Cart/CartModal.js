@@ -30,7 +30,7 @@ const CartModal = (props) => {
 
       <div
         id="drawer-right-example"
-        className=" fixed  right-0 z-50  bg-gray-100 h-screen  overflow-y-auto transition-transform translate-x-full  w-96 sm:w-[350px] "
+        className=" fixed  right-0 z-50  bg-gray-100 h-screen  overflow-y-auto transition-transform translate-x-full  md:w-96 sm:w-[350px] "
         tabIndex="-1"
         aria-labelledby="drawer-right-label"
       >

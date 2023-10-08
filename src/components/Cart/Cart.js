@@ -54,7 +54,7 @@ const Cart = () => {
               <img src={item.image} alt="item" className=" h-16 w-16 " />
             </li>
           </div>
-          <div className=" text-xs sm:text-[9px] truncate sm:mr-4 basis-1/2 ">
+          <div className=" md:text-xs sm:text-[9px]  sm:mr-4 basis-1/2 ">
             <li>{item.name}</li>
             <li className="font-bold">₹{Math.ceil(item.price * 10)}</li>
           </div>

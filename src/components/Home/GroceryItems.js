@@ -80,7 +80,7 @@ const GroceryAPI = (props) => {
                   className="group  relative"
                 >
                   <img
-                    className=" rounded-t-lg  sm:h-28 sm:w-24 lg:h-36 lg:w-32 "
+                    className=" rounded-t-lg  sm:h-28 sm:w-24 lg:h-36 lg:w-fit "
                     src={item.images[0].url}
                     alt="img"
                   />

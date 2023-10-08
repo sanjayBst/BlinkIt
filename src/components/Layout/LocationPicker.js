@@ -25,11 +25,11 @@ function LocationDetector() {
   }, []);
 
   return (
-    <div className='px-3 sm:text-[10px]'>
+    <div className='px-3 md:text-xs sm:text-[10px]'>
       {location ? (
         <div>
          
-          <p className='font-bold text-sm' >Delivery in 12 minutes</p>
+          <p className='font-bold ' >Delivery in 12 minutes</p>
           <p className='font-extrathin text-xs'>Dummy Address</p>
     
         </div>

@@ -14,7 +14,7 @@ const CartIcon = () => {
     <>
       <div className="text-center">
         <button
-          className="  items-center rounded-[6px] sm:w-[50px]  md:w-[112px] sm:h-[30px] md:h-[50px] py-2 px-3 gap-2 font-bold text-sm bg-[#0c831f] cursor-pointer text-white"
+          className="flex  flex-cols   items-center rounded-[6px] sm:w-[50px] md:w-[112px] sm:h-[30px] md:h-[50px] py-2 px-3 gap-2 font-bold text-sm bg-[#0c831f] cursor-pointer text-white"
           type="button"
           data-drawer-target="drawer-right-example"
           data-drawer-show="drawer-right-example"
@@ -23,7 +23,7 @@ const CartIcon = () => {
         >
           <BsCart3
             
-            className="_wiggle sm:hidden  md:h-5 md:w-5"
+            className="_wiggle sm:hidden md:flex  md:h-5 md:w-5"
             style={{ strokeWidth: "0.4" }}
           />
 
