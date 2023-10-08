@@ -47,8 +47,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex overflow-x-auto sm:block border sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
-        <div className="_header sm:flex lg:h-24">
+      <header className="flex overflow-hidden sm:block border sm:w-[345px] lg:w-full sticky top-0 z-50 bg-white  _nav px-2 sm:px-0">
+        <div className="_header sm:flex sm:h-20  lg:h-24">
           <div
             className=" basis-1/6  sm:hidden md:flex mt-3 font-extrabold max-w-[150px] md:max-w-[768px] px-8  w-full cursor-pointer sm:hover:bg-gray-50 items-center justify-center border-r _border-light"
             onClick={homeHandler}
@@ -69,12 +69,13 @@ const Header = () => {
           </div>
 
           {/* <div className="flex-1 mt-1  2  basis-2/6 relative _header_search  "> */}
-          <span className=" _text-default sm:mt-4 1/10 sm:py-5 lg:hidden  sm:mr-7 text-right pl-8 sm:hover:bg-gray-50 ">
+          <span className=" _text-default sm:mt-4 1/10 sm:py-2 lg:hidden  sm:mr-7 text-right pl-8 sm:hover:bg-gray-50 ">
             {isLogin && <button onClick={logoutHandler}>Logout</button>}
 
             {!isLogin && (
               <button onClick={loginHandler}>
-                <FaRegUser size={20} />
+                <FaRegUser 
+                className="sm:h-3"/>
               </button>
             )}
           </span>

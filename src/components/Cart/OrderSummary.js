@@ -10,7 +10,7 @@ const OrderSummary = () => {
 
   return (
     <>
-      <div className=" container mx-4 my-4 w-11/12 h-fill bg-white rounded-xl items-center ">
+      <div className=" container mx-4 my-4 sm:ml-4 w-11/12 h-fill bg-white rounded-xl items-center ">
         <div className="text-sm font-bold p-3">Bill Details</div>
 
         <div className="grid grid-cols-2  gap-4 text-xs ml-4 my-1 text-gray-500 ">

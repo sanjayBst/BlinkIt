@@ -1,4 +1,3 @@
-import React from "react";
 import { useContext } from "react";
 import { BsCart3 } from "react-icons/bs";
 import CartContext from "../../store/CartContext";
@@ -6,13 +5,16 @@ import CartContext from "../../store/CartContext";
 const CartIcon = () => {
   const cartCtx = useContext(CartContext);
 
+
+
+
   const numberOfCartItems = cartCtx.items.length;
-  console.log("numberOfCartItems==>",numberOfCartItems)
+  // console.log("numberOfCartItems==>",numberOfCartItems)
   return (
     <>
       <div className="text-center">
         <button
-          className="lg:flex sm:hidden  items-center rounded-[6px] min-w-[112px] h-[50px] py-2 px-3 gap-2 font-bold text-sm bg-[#0c831f] cursor-pointer text-white"
+          className="  items-center rounded-[6px] sm:w-[50px]  md:w-[112px] sm:h-[30px] md:h-[50px] py-2 px-3 gap-2 font-bold text-sm bg-[#0c831f] cursor-pointer text-white"
           type="button"
           data-drawer-target="drawer-right-example"
           data-drawer-show="drawer-right-example"
@@ -20,12 +22,12 @@ const CartIcon = () => {
           aria-controls="drawer-right-example"
         >
           <BsCart3
-            size={22}
-            className="_wiggle "
+            
+            className="_wiggle sm:hidden  md:h-5 md:w-5"
             style={{ strokeWidth: "0.4" }}
           />
 
-          <div className="flex flex-col font-Gilroy-Bold text-sm  leading-none">
+          <div className="flex flex-col font-Gilroy-Bold md:text-sm sm:text-[8px] leading-none">
             <span>
               {numberOfCartItems === 0
                 ? "My Cart"
@@ -36,9 +38,9 @@ const CartIcon = () => {
             </span>
           </div>
         </button>
-
-        
       </div>
+
+      
     </>
   );
 };

@@ -18,20 +18,19 @@ const ModalOverlay = (props) => {
   );
 };
 
-
 const CartModal = (props) => {
- 
-  
   const cartCtx = useContext(CartContext);
   const isCartEmpty = cartCtx.totalAmount;
 
   return (
     <>
-      <CartIcon />
+      
+        <CartIcon />
+     
 
       <div
         id="drawer-right-example"
-        className=" fixed  right-0 z-50  bg-gray-100 h-screen  overflow-y-auto transition-transform translate-x-full  w-96 "
+        className=" fixed  right-0 z-50  bg-gray-100 h-screen  overflow-y-auto transition-transform translate-x-full  w-96 sm:w-[350px] "
         tabIndex="-1"
         aria-labelledby="drawer-right-label"
       >
@@ -66,7 +65,7 @@ const CartModal = (props) => {
           </button>
         </div>
 
-        {isCartEmpty  === 0  && (
+        {isCartEmpty === 0 && (
           <div className="bg-white mx-4 my-4 w-11/12 py-4 rounded-xl h-fill">
             <div className="container  flex justify-center items-center  h-44 w-full ">
               <div className="mb-30 h-36 w-36">
@@ -96,23 +95,16 @@ const CartModal = (props) => {
           <ModalOverlay>{props.children}</ModalOverlay>
         </div>
 
-{/* <div>
+        {/* <div>
         { isCartEmpty !== 0 &&
 <CartItemCorousel/>
 }
 
 </div> */}
 
-<div>
-
-       { isCartEmpty !== 0 &&
-
-        <OrderSummary/>
-        
-       }
-</div>
-
+        <div>{isCartEmpty !== 0 && <OrderSummary />}</div>
       </div>
+      
     </>
   );
 };

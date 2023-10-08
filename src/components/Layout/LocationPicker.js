@@ -25,7 +25,7 @@ function LocationDetector() {
   }, []);
 
   return (
-    <div className='p-3'>
+    <div className='px-3 sm:text-[10px]'>
       {location ? (
         <div>
          
@@ -34,7 +34,7 @@ function LocationDetector() {
     
         </div>
       ) : error ? (
-        <p>Error: {error}</p>
+        <p  >Error: {error}</p>
       ) : (
         <p>Fetching location...</p>
       )}

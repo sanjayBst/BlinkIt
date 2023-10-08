@@ -29,10 +29,10 @@ const CardCorousel = () => {
  
   
   return (
-    <div className="container mx-auto"  >
-      <div className="flex items-center justify-center w-80% h-3/4 sm:py-5 px-1">
+    <div className="container mx-auto sm:ml-7"  >
+      <div className="flex items-center justify-center  w-80% h-3/4 sm:py-5 px-1">
         <CarouselProvider
-          className="lg:block "
+          className="lg:block  "
           naturalSlideWidth={100}
           isIntrinsicHeight={true}
           totalSlides={6}
@@ -172,7 +172,7 @@ const CardCorousel = () => {
             <ButtonNext
               role="button"
               aria-label="slide forward"
-              className="absolute z-30 right-0 sm:mr-0 lg:mr-2 bg-gray-200 p-3 rounded-full"
+              className="absolute z-30 right-12 sm:mr-0 lg:mr-2 bg-gray-200 p-3 rounded-full"
               id="next"
             >
               <svg

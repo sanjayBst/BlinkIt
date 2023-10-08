@@ -54,12 +54,12 @@ const Cart = () => {
               <img src={item.image} alt="item" className=" h-16 w-16 " />
             </li>
           </div>
-          <div className=" text-xs  basis-1/2 ">
+          <div className=" text-xs sm:text-[9px] truncate sm:mr-4 basis-1/2 ">
             <li>{item.name}</li>
             <li className="font-bold">₹{Math.ceil(item.price * 10)}</li>
           </div>
 
-          <div>
+          <div className="sm:mr-4">
             <CartCounter
               className=" basis-1/4  "
               onAdd={cartItemAddHanlder.bind(null, item)}
@@ -77,7 +77,7 @@ const Cart = () => {
       {cartItems}
       {isCartEmpty !== 0 && (
         <div className="fixed bottom-0 bg-white w-96 px-4 rounded-xl ">
-          <div className="sticky  bottom-0  bg-counter rounded-lg flex  justify-between items-center font-bold text-md my-3 mx-1 mb-6">
+          <div className="sticky  bottom-0 sm:w-[315px]  bg-counter rounded-lg flex  justify-between items-center font-bold text-md my-3 mx-1 mb-6">
             <div className="text-white mx-3 text-xs">
               <div> {"₹" + cartCtx.totalAmount}</div>
               <div className="font-extralight ">TOTAL </div>
@@ -92,6 +92,7 @@ const Cart = () => {
         </div>
       )}
     </CartModal>
+    
   );
 };
 

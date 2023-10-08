@@ -7,7 +7,7 @@ import ItemCorousel from "./ItemCorousel";
 const HomePage = () => {
   return (
     <>
-      <div className=" container overscroll-x-none mx-auto ">
+      <div className=" container overscroll-x-none overflow-x-hidden mx-auto ">
         <div className="hidden lg:block">
           <Banner />
         </div>
@@ -29,7 +29,9 @@ const HomePage = () => {
           <div className= "sm:text-md md:text-lg lg:text-2xl font-medium mt-2">Snacks & Munchies</div>
           <ItemCorousel category="fruits" />
         </div>
-        
+        <div>
+          
+        </div>
           
         
       </div>
