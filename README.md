@@ -17,23 +17,23 @@ https://blinkit-sanjaybst.netlify.app/
 
 Homepage
 
-![SS1](https://github.com/sanjayBst/BlinkIt/assets/68372360/dd0370fb-ee70-47e5-892c-a86687da5015)
+![SS1](https://github.com/sanjayBst/BlinkIt/assets/68372360/0f09190a-83b2-4007-96e2-4a3b7662a732)
 
 Paan corner
 
-![SS2](https://github.com/sanjayBst/BlinkIt/assets/68372360/e8fd006c-713b-47a4-a763-6cd986cfc632)
+![SS2](https://github.com/sanjayBst/BlinkIt/assets/68372360/4b8013b7-67f1-4d98-9bfb-6478cd743adf)
 
 Grocery List
 
-![SS3](https://github.com/sanjayBst/BlinkIt/assets/68372360/2dca72f3-d70c-4910-b014-05929b8c9b57)
+![SS3](https://github.com/sanjayBst/BlinkIt/assets/68372360/6fd8abc5-536c-484f-a20e-1f57f1e28d8e)
 
 Grocery Detail
 
-![SS4](https://github.com/sanjayBst/BlinkIt/assets/68372360/ace5d541-a0c9-4081-a443-ebd2ee4993fd)
+![SS4](https://github.com/sanjayBst/BlinkIt/assets/68372360/05cf1275-81bf-4266-8463-79bd2878094c)
 
 Cart
 
-![SS5](https://github.com/sanjayBst/BlinkIt/assets/68372360/e8f4c647-73b9-45a8-ba3f-d78b7fbfedc9)
+![SS5](https://github.com/sanjayBst/BlinkIt/assets/68372360/9cf9a4f4-3271-4100-bba0-9d813d13a1c6)
 
 
 
