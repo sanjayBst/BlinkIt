@@ -36,7 +36,7 @@ const GroceryAPI = (props) => {
     // console.log("I am called again!");
     const fetchGrocery = async () => {
       const response = await fetch(
-        `https://blinkit-clone-36f01-default-rtdb.firebaseio.com/${params.category}.json`
+        `https://blinkit-clone-36f08-default-rtdb.firebaseio.com/${params.category}.json`
       );
 
       if (!response.ok) {
