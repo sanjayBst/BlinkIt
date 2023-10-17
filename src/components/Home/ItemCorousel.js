@@ -25,7 +25,7 @@ const ItemCorousel = (props) => {
   useEffect(() => {
     const fetchGrocery = async () => {
       const response = await fetch(
-        `https://blinkit-clone-36f01-default-rtdb.firebaseio.com/${props.category}.json`
+        `https://blinkit-clone-36f076-default-rtdb.firebaseio.com/${props.category}.json`
       );
 
       // console.log(response);
